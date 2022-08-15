@@ -1,0 +1,390 @@
+.heading {
+	font-weight: 800;
+	font-size: 4vw;
+	text-align: left;
+}
+
+.head-text {
+	font-size: 1rem;
+	width: 90%;
+}
+
+.btn-dark {
+	background-color: var(--secondary-color);
+	padding: 1rem;
+	font-size: 1.2rem;
+	font-weight: 800;
+	border-radius: 15px;
+}
+
+.menu-box {
+	position: absolute;
+	z-index: 9999;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.animate-1 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 23rem;
+	flex-direction: column;
+}
+
+.anim-img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: var(--primary-color);
+	box-shadow: 2px 2px 7px var(--ee-color), -2px -2px 7px var(--ee-color);
+	animation: pulse 2000ms infinite forwards;
+	animation-delay: 2s;
+	border: 8px solid #fff;
+}
+
+.anim-img img {
+	padding-bottom: 4rem;
+	height: 250px;
+	width: 250px;
+	margin-top: 3rem;
+	object-fit: cover;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: var(--cc-color) 0 0 0 0;
+	}
+
+	100% {
+		box-shadow: #cccccc00 0 0 0 40px;
+	}
+}
+
+.anim-text {
+	padding: 0.4rem 1rem;
+	background-color: var(--primary-color);
+	border-radius: 40px;
+	color: var(--dark-text-hover);
+	font-weight: 600;
+	font-size: 0.9rem;
+	border: 1px solid var(--dark-text-hover);
+}
+
+/* shadow start   */
+
+.shadow-box {
+	width: 160px;
+	background-color: var(--dark-text-hover);
+	height: 50px;
+	border-radius: 10px;
+	border: 1px solid rgba(205, 205, 207, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	transition: all 0.5s;
+	box-shadow: 0 8px 16px -6px var(d);
+}
+
+@keyframes example {
+	0% {
+		background-color: var(--cc-color);
+	}
+	25% {
+		background-color: var(--cc-color);
+	}
+	50% {
+		background-color: var(--dd-color);
+	}
+	75% {
+		background-color: var(--cc-color);
+	}
+	100% {
+		background-color: var(--cc-color);
+	}
+}
+
+.lang-box {
+	width: 160px;
+	background-color: #fff;
+	height: 50px;
+	border-radius: 10px;
+	border: 1px solid rgba(205, 205, 207, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	opacity: 0;
+	box-shadow: 0 8px 16px -6px #ddd;
+}
+
+.round {
+	width: 35px;
+	height: 35px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-color: var(--dark-text);
+	padding: 0.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation-name: example;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.rectangle {
+	width: 100px;
+	height: 30px;
+	background-color: var(--dark-text);
+	border-radius: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: 700;
+	animation-name: example;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.limg {
+	width: 35px;
+	height: 35px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-color: #fff;
+	padding: 0.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rect-text {
+	background-color: #fff;
+	font-weight: 700;
+	color: var(--secondary-color);
+}
+
+/* shadow end  */
+
+.shadow-box1,
+.lang-box1 {
+	position: absolute;
+	left: 40px;
+	top: 20px;
+	transition: all 0.4s;
+}
+
+.shadow-box2,
+.lang-box2 {
+	position: absolute;
+	right: 40px;
+	top: 20px;
+	transition: all 0.4s;
+}
+
+.shadow-box3,
+.lang-box3 {
+	position: absolute;
+	left: 40px;
+	bottom: 10px;
+	transition: all 0.4s;
+}
+
+.shadow-box4,
+.lang-box4 {
+	position: absolute;
+	right: 40px;
+	bottom: 10px;
+	transition: all 0.4s;
+}
+
+.lang-box {
+	position: absolute;
+}
+
+@media (max-width: 1130px) {
+	.animate-1 {
+		margin: 3rem auto;
+		width: 30rem;
+	}
+
+	.heading-1 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.head-text {
+		font-size: 1.1rem;
+		width: 450px;
+	}
+}
+
+@media (max-width: 900px) {
+	.heading {
+		font-size: 2.5rem;
+	}
+	.head-text {
+		font-size: 1.1rem;
+		width: 400px;
+	}
+}
+
+.coding-skill {
+	color: red;
+	color: var(--pure-black-color);
+}
+
+.grid-item:last-child {
+	padding: 0;
+}
+
+.section-1 {
+	padding: 0 2rem 3rem;
+}
+
+.section-2 {
+	background-color: var(--dark-text-hover);
+	padding: 3rem;
+	border-radius: 70px 70px 0 0;
+}
+
+.section-3 {
+	padding: 3rem;
+}
+
+.section-2 h2,
+.section-3 h2,
+.section-2 h3 {
+	font-weight: 700;
+}
+
+.improve-box {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.improve-box h5 {
+	font-weight: 700;
+}
+
+.icon-home {
+	background-color: var(--green-light2);
+	color: var(--green-color2);
+	width: 4rem;
+	height: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 14px;
+	font-size: 1.5rem;
+	margin: 0 auto 2rem;
+}
+
+.footer {
+	padding: 3rem;
+	background-color: #fff;
+	text-align: center;
+}
+
+@media (max-width: 450px) {
+	.section-1 {
+		padding: 0.5rem;
+	}
+	.anim-img {
+		width: 200px;
+		height: 200px;
+	}
+
+	.shadow-box {
+		width: 110px;
+	}
+	.round {
+		width: 20px;
+		height: 20px;
+	}
+
+	.rectangle {
+		height: 20px;
+		width: 60px;
+		border-radius: 5px;
+	}
+	.heading {
+		font-size: 2.5rem;
+	}
+	.head-text {
+		font-size: 0.9rem;
+		width: 93%;
+	}
+	.animate-1 {
+		margin: 3rem 0;
+		width: 30rem;
+	}
+	.shadow-box1,
+	.lang-box1 {
+		position: absolute;
+		left: 0;
+		top: 10px;
+		transition: all 0.4s;
+	}
+
+	.shadow-box2,
+	.lang-box2 {
+		position: absolute;
+		right: 0;
+		top: 10px;
+		transition: all 0.4s;
+	}
+
+	.shadow-box3,
+	.lang-box3 {
+		position: absolute;
+		left: 0;
+		bottom: 10px;
+		transition: all 0.4s;
+	}
+
+	.shadow-box4,
+	.lang-box4 {
+		position: absolute;
+		right: 0;
+		bottom: 10px;
+		transition: all 0.4s;
+	}
+	.section-1 {
+		padding: 1rem;
+	}
+	.section-2 h2,
+	.section-3 h2 {
+		font-size: 1.2rem;
+		text-align: center;
+	}
+	.home-main {
+		padding: 0 !important;
+	}
+	.section-2 {
+		padding: 0;
+		width: 100vw;
+		padding: 3rem 2rem;
+	}
+	.section-3 {
+		padding: 1rem;
+	}
+	.improve-box {
+		text-align: left;
+	}
+	.icon-home {
+		margin: 0 0 1rem;
+	}
+	.improve-box h5 {
+		font-size: 1rem;
+	}
+	.improve-box span {
+		font-size: 0.8rem;
+	}
+}

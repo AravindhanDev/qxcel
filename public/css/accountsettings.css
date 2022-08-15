@@ -1,0 +1,32 @@
+.user-form .form-group:last-child {
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #eee;
+}
+
+.user-form input {
+	width: 40rem;
+}
+
+.user-form a {
+	color: var(--primary-color) !important;
+	font-weight: bold;
+}
+
+.delete-acc h6 {
+	font-weight: 900;
+	cursor: pointer;
+	color: #e93c3c;
+}
+
+.delete-acc .form-text {
+	width: 35rem;
+}
+
+@media (max-width: 700px) {
+	.user-form input {
+		width: 95%;
+	}
+	.delete-acc .form-text {
+		width: 95%;
+	}
+}

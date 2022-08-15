@@ -1,0 +1,83 @@
+1) What is PHP?
+a) PHP is a open-source programming language
+b) PHP is used to develop dynamic and interactive websites
+c) PHP is a server-side scripting language
+d) All of the mentioned
+
+2) Which of the following is the correct way to add a comment in PHP code?
+a) #
+b) //
+c) /* */
+d) All of the mentioned
+
+3) What is the output of the following code snippet in php? (type2)
+
+4) What is the purpose of the var_dump() function in php?
+(datatype & value) (type2)
+
+5) Which of the following code snippets used to find length of string? (type3)
+
+6) What is the output of the following code snippet in php? (type2)
+
+7) Which is the right way of declaring a variable in PHP?
+a) $3hello
+b) $_hello
+c) $this
+d) $5_Hello
+
+8) Which of the following code snippets used to create constant variable? (type3) 
+
+9) What is the output of the following code snippet in php? (type2)
+
+10) What is the output of the following code snippet in php? (type2)
+
+11) Which of the following PHP functions can be used for generating unique ids?
+a) md5()
+b) uniqueid()
+c) mdid()
+d) id()
+
+12) What is the output of the following code snippet in php? (type2)
+
+13) How many type of loops in php programming language? (type1)
+a) 3
+b) 4
+c) 5
+d) 2
+
+14) In PHP foreach loop, what is the name of highlighted part? (type2)
+
+15) Which of the following code snippets get last number? (type3)
+
+16) What are the types of array in php programming language? 
+a) indexed, associative, multidimensional
+
+17) What is the output of the following code snippet? (type2)
+
+18) Which PHP function displays the web page’s most recent modification date?
+a) getlastmod()
+b) get_last_mod()
+c) lastmod()
+d) last_mod()
+
+19) What is the output of the following code snippet? (type2)
+
+20) Which of the following is not lead to infinite loop? (type3)
+
+21) What is the output of the following code snippet? (type2)
+
+22) setcookie() function must appear before the
+<html> tag
+<body> tag
+<head> tag
+<script> tag
+
+23) What is the name of function to start the session in php? (type3)
+
+24) What is the following advanced OOP features is/are not supported by php?
+a) Method overloading
+b) Multiple Inheritance
+c) Namespaces
+d) Object Cloning
+
+25) Which of the following code snippets correctly defines constructor in php? (type3)

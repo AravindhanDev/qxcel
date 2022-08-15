@@ -1,0 +1,345 @@
+.loader {
+	animation: spin 500ms linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.profile-header {
+	position: relative;
+	background-color: var(--dark-text-hover);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	border: 1px solid var(--ee-color);
+}
+
+.profile-cover {
+	width: 100%;
+	height: 200px;
+	border-radius: 20px 20px 0 0;
+}
+
+.profileimg-edit1 {
+	position: absolute;
+	top: -53px;
+	left: 180px;
+	font-size: 2rem;
+	color: var(--dark-text-hover);
+	cursor: pointer;
+}
+
+.profileimg-edit1:hover {
+	color: var(--dark-text-hover);
+}
+
+.profileimg-edit2 {
+	position: absolute;
+	top: 0;
+	right: 120px;
+	font-size: 2rem;
+	background-color: var(--dark-text-hover);
+	color: #000;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.profile-desc {
+	position: relative;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-img {
+	background: var(--secondary-color);
+	width: 170px;
+	height: 170px;
+	border-radius: 50%;
+	border: 5px solid var(--dark-text-hover);
+	position: absolute;
+	top: -120px;
+	cursor: pointer;
+}
+
+.profile-img:hover {
+	background: var(--secondary-color);
+	width: 170px;
+	filter: brightness(50%);
+	height: 170px;
+	border-radius: 50%;
+	border: 5px solid var(--dark-text-hover);
+	position: absolute;
+	top: -120px;
+	cursor: pointer;
+}
+
+.profile-headers {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile-template {
+	background-color: var(--dark-text-hover);
+	border-radius: 20px;
+	padding: 2rem;
+	border: 1px solid var(--light-btn);
+}
+
+.lang-tab {
+	padding: 0.3rem 0.5rem;
+	border-radius: 8px;
+	background: var(--light-btn);
+	display: inline;
+	font-weight: 600;
+}
+
+.fileName {
+	font-size: 0.9rem;
+}
+
+.modal {
+	width: 28rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 1rem;
+	z-index: 99999999;
+}
+
+#jobModal {
+	width: 35rem;
+}
+
+.globe {
+	position: absolute;
+	top: 37px;
+	left: 28px;
+	font-size: 1.2rem;
+}
+
+#personalModal {
+	width: 33rem;
+}
+
+.modal::-webkit-scrollbar {
+	width: 0;
+}
+
+.modal-content {
+	padding: 1rem;
+	border-radius: 20px;
+}
+
+header {
+	z-index: 9;
+}
+
+.modal-body {
+	border: none;
+}
+
+.shareProfile {
+	background: var(--primary-color) !important;
+	color: var(--dark-text-hover);
+	padding: 2rem 1.5rem;
+	border-radius: 10px;
+	position: sticky;
+	top: 15%;
+	margin-bottom: 3rem;
+}
+
+.shareProfile h5 span {
+	color: var(--dark-active);
+}
+
+.project-image-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.projbox {
+	border-radius: 20px;
+	width: 180px;
+	height: 200px;
+	margin-right: 1rem;
+	width: 100%;
+}
+
+.project-image {
+	width: 200px;
+	height: 220px;
+	margin-right: 1.5rem;
+	position: relative;
+	margin-top: 2rem;
+}
+
+.project-image:hover .edit-projimg {
+	display: grid;
+}
+
+.work-experience:hover .edit-work {
+	display: grid;
+}
+
+.edit-projimg,
+.edit-work {
+	width: 36px;
+	height: 36px;
+	display: grid;
+	place-items: center;
+	background: var(--hover-color);
+	border-radius: 50%;
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	cursor: pointer;
+	display: none;
+}
+
+.workname {
+	font-size: 1rem;
+}
+
+.edit-work {
+	top: -8px;
+	right: 15px;
+}
+
+.profile-skill-exist {
+	text-align: left;
+}
+
+.share_profile {
+	height: 10rem;
+}
+
+.shareProfile h5,
+.shareProfile p {
+	text-align: left !important;
+}
+
+@media (max-width: 1113px) {
+	.share_profile {
+		width: 21rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.res-text {
+		display: none;
+	}
+}
+
+@media (max-width: 500px) {
+	#personalModal,
+	#jobModal,
+	#projectModal {
+		width: 100%;
+	}
+	.profile-summary_footer a {
+		font-size: 0.85rem;
+		white-space: nowrap;
+	}
+	.profile-summary-desc p {
+		font-size: 0.96rem;
+		text-align: left;
+	}
+	.profile-summary-details div p {
+		font-size: 0.9rem;
+		text-align: left;
+	}
+}
+
+@media (max-width: 440px) {
+	.main {
+		padding: 0 !important;
+	}
+	.row > * {
+		padding: 0 !important;
+	}
+	.profile-header {
+		width: 99% !important;
+	}
+	.share_profile {
+		margin-top: 1rem;
+		width: 100vw;
+	}
+	.public-profile {
+		padding: 0 !important;
+	}
+	.publicprofile {
+		padding: 0.3rem !important;
+	}
+	.globe {
+		position: absolute;
+		top: 37px;
+		left: 18px;
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 450px) {
+	#personalModal,
+	#jobModal,
+	#projectModal {
+		width: 100vw;
+		margin: 0;
+		padding: 0;
+	}
+	.profile-desc {
+		align-items: flex-start;
+	}
+	.profileimg-edit2 {
+		right: 110px;
+		font-size: 1.8rem;
+		width: 40px;
+		height: 40px;
+	}
+	.btns {
+		text-align: left;
+	}
+	.btns button {
+		margin: 0 !important;
+		margin-bottom: 0.5rem !important;
+	}
+	.profileimg-edit1 {
+		left: 105px;
+		font-size: 1.8rem;
+		width: 40px;
+		height: 40px;
+	}
+	.profileimg-edit2 {
+		left: 160px;
+		font-size: 1.8rem;
+		width: 40px;
+		height: 40px;
+	}
+	.workname {
+		text-align: left !important;
+		font-size: 1rem;
+	}
+	.workdates,
+	.workloc,
+	.workdesc {
+		font-size: 0.9rem;
+	}
+}

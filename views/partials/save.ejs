@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="../../css/allskilltest.css" />
+<% if (savedList) { %>
+<div
+	class="modal fade"
+	id="saveModal"
+	tabindex="-1"
+	aria-labelledby="saveModalLabel"
+	aria-hidden="true"
+>
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content" style="background-color: #fafafa">
+			<div class="modal-header profile-headers">
+				<h5 class="modal-title b-800" id="saveModalLabel">Saved Test</h5>
+
+				<button
+					type="button"
+					class="btn btn-light"
+					style="width: 40px; height: 40px; border-radius: 50%"
+					data-bs-dismiss="modal"
+					aria-label="Close"
+				>
+					<i class="bi bi-x-lg"></i>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row mt-5 skill_test-container" id="skill_test-container">
+					<!-- condition start  -->
+					<% if (savedList.length > 0) { %> <% for (let data of savedList) { %>
+					<div class="col-sm-12" onclick="location.href='/skill-test/html'">
+						<div class="all-skill-box">
+							<div class="all-skill-img">
+								<img src="../images/<%= data %>.png" alt="" />
+							</div>
+							<div class="all-skill-desc">
+								<p class="all-skill-name">
+									<% if (data === 'html') data = 'HTML 5' %> <% if (data ===
+									'css') data = 'CSS 3' %> <% if (data === 'java') data = 'Java'
+									%> <% if (data === 'python') data = 'Python' %> <% if (data
+									=== 'javascript') data = 'JavaScript (ES6)' %> <% if (data ===
+									'bootstrap') data = 'Bootstrap' %> <% if (data === 'jquery')
+									data = 'jQuery' %> <% if (data === 'react') data = 'React.js'
+									%> <% if (data === 'android') data = 'Android' %> <% if (data
+									=== 'php') data = 'PHP' %> <% if (data === 'sql') data = 'SQL'
+									%> <%= data %>
+								</p>
+								<p class="all-skill-icon">
+									<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+									<i class="bi bi-question-square"></i> &nbsp; 25 questions
+								</p>
+							</div>
+						</div>
+					</div>
+					<% } %> <% } else { %>
+					<h5 style="font-weight: bold">Not Saved Yet &nbsp; 💤</h5>
+					<% } %>
+					<!-- condition end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<% } %>

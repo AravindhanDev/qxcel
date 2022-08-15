@@ -1,0 +1,175 @@
+.main {
+	padding-bottom: 2rem;
+}
+
+.sticky-sidebar1 {
+	position: sticky;
+}
+
+.skill-tab {
+	padding: 0.3rem 1rem;
+	border-radius: 50px;
+	font-size: 0.9rem;
+	background: #eee;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.test-box {
+	background-color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	padding: 2rem;
+}
+
+.test-heading {
+	font-weight: 800;
+	font-size: 1.4rem;
+}
+
+.startshare {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn-red-black {
+	font-weight: 700;
+}
+
+.share {
+	display: flex;
+	align-items: center;
+}
+
+.copied {
+	background-color: var(--blue-light1);
+	padding: 0.2rem 0.4rem;
+	border-radius: 8px;
+	color: #000;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.share i {
+	font-size: 1.8rem;
+	cursor: pointer;
+}
+
+.rules p {
+	font-weight: 600;
+	color: var(--black-dark);
+	font-size: 0.9rem;
+}
+
+.rules p span {
+	font-weight: 400;
+	color: var(--black-light);
+}
+
+.tab-heading {
+	font-weight: 600;
+	font-size: 1rem;
+	color: var(--black-dark);
+	position: relative;
+	border-bottom: 1px solid #aaa;
+	display: inline-block;
+}
+
+.tab-heading1:after {
+	left: calc(15% + 16px);
+}
+
+.tab-heading2:after {
+	left: calc(28% + 16px);
+}
+
+.tab-heading3:after {
+	left: calc(9% + 16px);
+}
+
+.tab-heading4:after {
+	left: calc(18% + 16px);
+}
+
+.tab-heading5:after {
+	left: calc(10% + 16px);
+}
+
+.tab-heading6:after {
+	left: calc(22% + 16px);
+}
+
+.instruction {
+	position: relative;
+}
+
+.instruction ul {
+	padding: 1rem;
+}
+
+.dropdown-divider {
+	background-color: #ffffff !important;
+}
+
+.btn-light {
+	background-color: var(--light-btn) !important;
+	color: var(--secondary-color);
+	font-weight: 600;
+}
+
+.btn-blue {
+	background: #5627ff;
+	color: var(--dark-text-hover);
+}
+
+.btn-light:hover {
+	background-color: var(--light-btn);
+}
+
+.btn-share {
+	color: var(--secondary-color);
+	font-weight: 800;
+}
+
+.popular-head {
+	font-weight: bold;
+}
+
+.popular-skilltab {
+	display: flex;
+	border-bottom: 1px solid #ddd;
+}
+
+.populardesc a {
+	color: var(--black-dark);
+	font-weight: bold;
+	font-size: 0.95rem;
+	transition: all 0.2s;
+}
+
+.populardesc a:hover {
+	color: var(--primary-color);
+	text-decoration: underline;
+}
+
+.populardesc p {
+	font-size: 0.9rem;
+	color: var(--black-light);
+}
+
+.popularimg img {
+	border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+	.col-xl-4 {
+		margin-top: 3rem;
+	}
+}
+
+@media (max-width: 450px) {
+	main {
+		padding: 0 !important;
+	}
+}

@@ -1,0 +1,88 @@
+<%- include('./partials/header.ejs') -%>
+
+<link rel="stylesheet" href="../css/login.css" />
+<section id="home-section" class="grid-container">
+	<%- include("./partials/registersidebar.ejs") -%>
+	<div class="grid-item main pt-4">
+		<main class="user-main">
+			<div class="form-container">
+				<h3>Sign up to Qxcel</h3>
+				<div class="row">
+					<div class="col-lg-12 mt-3">
+						<div class="row">
+							<div class="col-6">
+								<a class="btn w-100 btn-black-red" href="/auth/google">
+									<i class="bi bi-google"></i> &nbsp; Google
+								</a>
+							</div>
+							<div class="col-6">
+								<a class="btn w-100 btn-black-red" href="/auth/facebook">
+									<i class="bi bi-facebook"></i> &nbsp; Facebook
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 mt-4 login-line text-muted">or</div>
+					<div class="col-lg-12">
+						<label for="email">Email address</label>
+						<input
+							type="text"
+							class="form-control mt-1"
+							id="email"
+							onfocus="this.removeAttribute('readonly')"
+							readonly
+							class="input"
+						/>
+						<div class="form-text d-none">
+							<i class="bi bi-exclamation-circle"></i> &nbsp; Email is required
+						</div>
+					</div>
+					<div class="col-lg-12 mt-4" style="position: relative">
+						<label for="password">Password</label>
+						<div class="eye">
+							<i class="bi bi-eye"></i>
+							<i class="bi bi-eye-slash d-none"></i>
+						</div>
+						<input
+							type="password"
+							class="form-control mt-1"
+							id="password"
+							onfocus="this.removeAttribute('readonly')"
+							readonly
+							class="input"
+						/>
+						<div class="form-text d-none">
+							<i class="bi bi-exclamation-circle"></i> &nbsp; Password must
+							contain 6 charecters
+						</div>
+					</div>
+					<div class="col-lg-12 mt-4 register-load">
+						<button class="w-100 btn btn-red-black" id="btn-register">
+							Create my free account
+						</button>
+						<div class="ubuntu-loading d-none">
+							<img
+								width="25"
+								height="25"
+								src="https://img.icons8.com/external-others-inmotus-design/67/000000/external-Loading-loaders-others-inmotus-design-4.png"
+							/>
+						</div>
+					</div>
+					<p class="mt-4">
+						Already a registered Student?
+						<a class="white-link" href="/login">Sign In</a>
+					</p>
+					<p class="mt-2" style="text-align: left; font-size: 0.8rem">
+						By clicking “Create my free account”, I agree to Qxcel's
+						<br />
+						<a class="btn-link" href="/terms-conditions">Terms of Service</a> &
+						<a class="btn-link" href="/privacy-policy">Privacy Policy.</a>
+					</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</section>
+<script src="../js/register.js"></script>
+
+<%- include('./partials/footer.ejs') -%>

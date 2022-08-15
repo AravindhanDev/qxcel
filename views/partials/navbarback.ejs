@@ -1,0 +1,23 @@
+<header>
+	<h5 class="back" onclick="location.href='/all_skill_test'">
+		<i class="bi bi-arrow-left"></i> &nbsp; Back
+	</h5>
+	<div class="menu-box">
+		<div class="menu">
+			<img src="../images/menu.png" class="img-fluid" alt="" />
+		</div>
+		<div class="menu-items">
+			<p onclick="location.href='/public-profile/<%= currentUser %>'">
+				Public Profile
+			</p>
+			<p onclick="location.href='/account-settings'">Account Settings</p>
+			<p style="display: flex; justify-content: space-between">
+				<span>Dark Mode &nbsp;<span class="pro">Pro</span></span>
+				<span><i class="bi bi-moon"></i></span>
+			</p>
+			<div class="dropdown-divider"></div>
+			<p onclick="location.href='/profile-strength'">Profile Strength</p>
+			<p onclick="location.href='/logout'">Log Out</p>
+		</div>
+	</div>
+</header>

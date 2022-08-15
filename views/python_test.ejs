@@ -1,0 +1,1545 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/assessment.css" />
+<link rel="stylesheet" href="../css/test_template.css" />
+<section id="python_test">
+	<div class="container-fluid" id="<%= currentUser %>">
+		<div class="atop row">
+			<div class="col-md-1 col-1 close-timer">
+				<div
+					class="close"
+					onclick="location.assign('/skill-test/<%= testName %>')"
+				>
+					<i class="bi bi-x-lg"></i>
+				</div>
+			</div>
+			<div class="col-md-10 col-9">
+				<div class="aback">
+					<div class="ascore"><span>25</span></div>
+					<div class="afront"></div>
+				</div>
+			</div>
+			<div class="col-md-1 col-1">
+				<div class="timer text-center">15:00</div>
+			</div>
+		</div>
+	</div>
+	<section class="question_box" id="<%= testName %>">
+		<section id="python_q25" class="question type1">
+			<h4 class="b-800 type1_question">
+				Which type of Programming does Python support?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Object-oriented Programming</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Structural Programming</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Functional Programming</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>All of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q24" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Is python code compiled or interpreted?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Both compiled and interpreted</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Neither compiled nor interpreted</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Only compiled</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Only interpreted</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q23" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				Is the following code snippet produces errors?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_3.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>12</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>True</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>10.234</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Jerry is a leader</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q22" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippet used to find type of variable?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_4_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_4_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q21" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_5.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>H</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>e</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>He</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>l</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q20" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_6.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>2</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>9</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>7</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>7.5</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q19" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets have exponent functionality?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_7_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_7_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q18" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following datatype is immutable?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>String</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>List</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Dictionary</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Set</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q17" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the algorithm behind python's in-built sort() function?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_9.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Merge Sort</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Radix Sort</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Tim Sort</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Bubble Sort</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q16" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_10.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>{'c', 'c++', 'python'}</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>('c', 'c++', 'p')</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>['c', 'c++', 'python']</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Cannot be determined</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q15" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How to access the skills(key) in the python dictionary?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_11_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_11_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q14" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_12.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>1 2 3</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>1 2</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>0 1 2</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>None of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q13" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets can cause maximum recursion depth
+				exceeded error?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_13_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_13_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q12" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				What is the type of the object created for class?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&lt;class 't1.Test'&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>&lt;class '__main__.Test'&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>&lt;class Test&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>&lt;class object&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q11" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_15.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>170</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>12</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>0</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Compilation Error</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q10" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_16.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>[1, 3, 5]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>[1, 5, 3]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>[2, 4, 6]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>[4, 6, 2]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q9" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippet produces AttributeError?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_17_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../python/question_17_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q8" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_18.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>[100, 202, 306]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>[100, 306]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>[306, 408]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>[202, 306]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q7" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				What is output of print(math.pow(6, 3))?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>216</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>36</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>6</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>63</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q6" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_20.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>[45, 5, 62, 7, 81]</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>'45 5 62 7 81'</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>['45', '5', '62', '7', '81']</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>None of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q5" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following is the use of id() function in python?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Every object doesn’t have a unique id</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Id returns the identity of the object</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>All of the mentioned</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>None of the mentioned</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q4" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following is true for variable names in Python?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type_option_lg type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&, _ are the only two special characters allowed</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>unlimited length</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>all private members must have leading and trailing _</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>none of the mentioned</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q3" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_23.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>B</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>A</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>BA</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>AttributeError</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q2" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_24.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>512, 512</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>64, 512</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>64, 64</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>512, 64</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="python_q1" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What type of inheritance is illustrated in the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../python/question_25.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Single Inheritance</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Multiple Inheritance</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Multi-level Inheritance</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Hierarchical Inheritance</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section class="show_stats d-none">
+		<h3 class="b-700">Test Stats</h3>
+		<div class="row mt-4">
+			<div class="col-sm-4">
+				<div class="stats-box question_stats">
+					<p>Questions</p>
+					<h3 class="stat-1 b-700 blue-text">24 / 25</h3>
+					<p>18/25 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box score">
+					<p>Score</p>
+					<h3 class="stat-2 b-700 blue-text">300 / 375</h3>
+					<p>270/375 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box time_stats">
+					<p>Total Time</p>
+					<h3 class="stat-3 b-700 blue-text">13m 53s</h3>
+					<p>10m 23s average</p>
+				</div>
+			</div>
+		</div>
+		<div class="stat-footer" id="statBtn" style="text-align: right">
+			<button class="btn btn-blue-black mt-4">Continue</button>
+		</div>
+	</section>
+	<section class="feedback d-none">
+		<h3 class="b-700">How was the experience?</h3>
+		<div class="feedback-form mt-3">
+			<label
+				>Do you feel like the test accurately measured your skills?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-1 mt-2">
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">no</span>
+					<i class="bi bi-hand-thumbs-down-fill yellow-emoji"></i> No
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">somewhat</span>
+					<i class="bi bi-hand-thumbs-up-fill yellow-emoji"></i> Somewhat
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">yes</span>
+					<i class="bi bi-emoji-heart-eyes-fill yellow-emoji"></i>
+					Yes
+				</button>
+			</div>
+			<br />
+			<label
+				>How would you rate your overall experience?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-2 mt-2">
+				<div class="black-bg">
+					<span class="d-none">verybad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-frown-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">bad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-expressionless-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">average</span>
+					<i class="yellow-emoji-bg bi bi-emoji-neutral-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">good</span>
+					<i class="yellow-emoji-bg bi bi-emoji-smile-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">excellent</span>
+					<i class="yellow-emoji-bg bi bi-emoji-laughing-fill"></i>
+				</div>
+			</div>
+			<br />
+			<label>Anything else you'd like to add?</label>
+			<textarea
+				class="form-control"
+				rows="4"
+				id="review"
+				style="resize: none"
+				placeholder="I would improve the following."
+			></textarea>
+			<br />
+			<button class="btn btn-black-blue" disabled id="feedbackBtn">
+				Continue
+			</button>
+		</div>
+	</section>
+	<footer id="afooter">
+		<div class="submit-answer d-none">
+			<div class="submit">
+				<span>
+					<i class="bi bi-check-lg blue-text"></i>
+				</span>
+				<div class="answer">
+					<h4 class="b-800 blue-text">Submit answer</h4>
+					<p>
+						Something wrong with the question?
+						<a href="" class="blue-text bold">Provide feedback.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<button
+			class="btn btn-blue-black b-800 quizSubmit"
+			id="quizSubmit"
+			disabled
+			href=""
+		>
+			Submit
+		</button>
+	</footer>
+</section>
+<script src="../js/html_test.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

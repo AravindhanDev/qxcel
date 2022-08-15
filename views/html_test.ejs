@@ -1,0 +1,1333 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/assessment.css" />
+<link rel="stylesheet" href="../css/test_template.css" />
+<section id="html_test">
+	<div class="container-fluid" id="<%= currentUser %>">
+		<div class="atop row">
+			<div class="col-md-1 col-1 close-timer">
+				<div
+					class="close"
+					onclick="location.assign('/skill-test/<%= testName %>')"
+				>
+					<i class="bi bi-x-lg"></i>
+				</div>
+			</div>
+			<div class="col-md-10 col-9">
+				<div class="aback">
+					<div class="ascore"><span>25</span></div>
+					<div class="afront"></div>
+				</div>
+			</div>
+			<div class="col-md-1 col-1">
+				<div class="timer text-center">15:00</div>
+			</div>
+		</div>
+	</div>
+	<section class="question_box" id="<%= testName %>">
+		<section id="html_q25" class="question type1">
+			<h4 class="b-800 type1_question">
+				HTML developed by tim-berners-lee in ?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>1989</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>1990</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>1991</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>1993</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q24" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				Which part of the code is considered an element?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../html/question_2.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>This is the h1 element</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>&lt;h1&gt; HTML for Designer &lt;/h1&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>&lt;h1&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>&lt;/h1&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q23" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				which is the correct markup for html comments ?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_3_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_3_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q22" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Choose the correct html element for the largest heading?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&lt;h4&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>&lt;h6&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>&lt;h1&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>&lt;h2&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q21" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				what is the correct HTML element for inserting a line break?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_5_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_5_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q20" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the element in code that is considered as a block element?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../html/question_6.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>&lt;span&gt;&lt;/span&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>&lt;p&gt;&lt;/p&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>&lt;strong&gt;&lt;/strong&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>&lt;label&gt;&lt;/label&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q19" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				which is the correct markup to use the p element
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_7_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_7_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q18" class="question type2 d-none">
+			<h4 class="b-800 type1_question">which tag defines superscript text?</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../html/question_8.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>&lt;formula&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>&lt;sup&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>&lt;above&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>&lt;superscript&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q17" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				What's NOT true about the class attribute
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type_option_lg type1_option1">
+					<div class="option_and_number option_and_number_lg">
+						<span class="optionno">1</span>
+						<p>An element can have 1 id and 1 class</p>
+					</div>
+
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option2">
+					<div class="option_and_number option_and_number_lg">
+						<span class="optionno">2</span>
+						<p>An element can only have 1 class</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option3">
+					<div class="option_and_number option_and_number_lg">
+						<span class="optionno">3</span>
+						<p>It allows you to select and access specific elements</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>It's a global attribute</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q16" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the name of this part of the HTML syntax?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../html/question_10.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Attribute value</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Attribute name</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Attribute keyword</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Attribute selector</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q15" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which is the correct markup for giving an element the id "New"?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_11_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_11_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q14" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Select the element you can use to apply styling to a portion of text
+				without creating new line break
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_12_1.PNG"
+							class="type3-img type3-img-lg type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_12_2.PNG"
+							class="type3-img type3-img-lg type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q13" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which attribute is used to set the system of numeration?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_13_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_13_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q12" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which is the correct markup to use an image as a link?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_14_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_14_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q11" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				Which part of the code is considered as an inline element?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../html/question_15.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>&lt;div&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>&lt;p&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>&lt;img&gt;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>src="msg.jpg"</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q10" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which is the correct markup to create a button element?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_16_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_16_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q9" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which HTML element defines emphasize text (typically displayed in
+				italic)?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&lt;emphasize&gt;</p>
+					</div>
+
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>&lt;italic&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>&lt;em&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>None of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q8" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Find which markup the "picture.jpg" file is located in the same folder
+				as the current page.
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&lt;img src="../picture.jpg" /&gt;</p>
+					</div>
+
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>&lt;img src="./picture.jpg" /&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>&lt;img src="/picture.jpg" /&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Both b and c are correct</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q7" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which HTML element is a container for metadata (data about data)?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&lt;html&gt; ... &lt;/html&gt;</p>
+					</div>
+
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>&lt;title&gt; ... &lt;/title&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>&lt;head&gt; ... &lt;/head&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>&lt;fieldset&gt; ... &lt;/fieldset&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q6" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which is the correct markup to define a set of navigation links?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_20_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_20_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q5" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				What are the semantic elements which describes its meaning?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&lt;form&gt;</p>
+					</div>
+
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>&lt;table&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>&lt;article&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>All of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q4" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which one is the correct markup for let the user to select only one
+				radio button?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_22_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_22_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q3" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which is the correct markup to hide the element using the property?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_23_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../html/question_23_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q2" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What attribute do you need to add to the &lt;video&gt; tag if you want
+				it to start automatically but without sound?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../html/question_24.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Autoplay and mute</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Autostart and sound="off"</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Autoplay and muted</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Autostart and mute</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="html_q1" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Choose the tag which is not self-closing?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number option_and_number_lg">
+						<span class="optionno">1</span>
+						<p>&lt;img&gt;</p>
+					</div>
+
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number option_and_number_lg">
+						<span class="optionno">2</span>
+						<p>&lt;input&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number option_and_number_lg">
+						<span class="optionno">3</span>
+						<p>&lt;br&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number option_and_number_lg">
+						<span class="optionno">4</span>
+						<p>&lt;textarea&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section class="show_stats d-none">
+		<h3 class="b-700">Test Stats</h3>
+		<div class="row mt-4">
+			<div class="col-sm-4">
+				<div class="stats-box question_stats">
+					<p>Questions</p>
+					<h3 class="stat-1 b-700 blue-text">24 / 25</h3>
+					<p>18/25 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box score">
+					<p>Score</p>
+					<h3 class="stat-2 b-700 blue-text">300 / 375</h3>
+					<p>270/375 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box time_stats">
+					<p>Total Time</p>
+					<h3 class="stat-3 b-700 blue-text">13m 53s</h3>
+					<p>10m 23s average</p>
+				</div>
+			</div>
+		</div>
+		<div class="stat-footer" id="statBtn" style="text-align: right">
+			<button class="btn btn-blue-black mt-4">Continue</button>
+		</div>
+	</section>
+	<section class="feedback d-none">
+		<h3 class="b-700">How was the experience?</h3>
+		<div class="feedback-form mt-3">
+			<label
+				>Do you feel like the test accurately measured your skills?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-1 mt-2">
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">no</span>
+					<i class="bi bi-hand-thumbs-down-fill yellow-emoji"></i> No
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">somewhat</span>
+					<i class="bi bi-hand-thumbs-up-fill yellow-emoji"></i> Somewhat
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">yes</span>
+					<i class="bi bi-emoji-heart-eyes-fill yellow-emoji"></i>
+					Yes
+				</button>
+			</div>
+			<br />
+			<label
+				>How would you rate your overall experience?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-2 mt-2">
+				<div class="black-bg">
+					<span class="d-none">verybad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-frown-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">bad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-expressionless-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">average</span>
+					<i class="yellow-emoji-bg bi bi-emoji-neutral-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">good</span>
+					<i class="yellow-emoji-bg bi bi-emoji-smile-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">excellent</span>
+					<i class="yellow-emoji-bg bi bi-emoji-laughing-fill"></i>
+				</div>
+			</div>
+			<br />
+			<label>Anything else you'd like to add?</label>
+			<textarea
+				class="form-control"
+				rows="4"
+				id="review"
+				style="resize: none"
+				placeholder="I would improve the following."
+			></textarea>
+			<br />
+			<button class="btn btn-black-blue" disabled id="feedbackBtn">
+				Continue
+			</button>
+		</div>
+	</section>
+	<footer id="afooter">
+		<div class="submit-answer d-none">
+			<div class="submit">
+				<span>
+					<i class="bi bi-check-lg blue-text"></i>
+				</span>
+				<div class="answer">
+					<h4 class="b-800 blue-text">Submit answer</h4>
+					<p>
+						Something wrong with the question?
+						<a href="" class="blue-text bold">Provide feedback.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<button
+			class="btn btn-blue-black b-800 quizSubmit"
+			id="quizSubmit"
+			disabled
+			href=""
+		>
+			Submit
+		</button>
+	</footer>
+</section>
+<script src="../js/html_test.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

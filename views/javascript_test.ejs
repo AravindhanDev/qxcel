@@ -1,0 +1,1337 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/assessment.css" />
+<link rel="stylesheet" href="../css/test_template.css" />
+<section id="js_test">
+	<div class="container-fluid" id="<%= currentUser %>">
+		<div class="atop row">
+			<div class="col-md-1 col-1 close-timer">
+				<div
+					class="close"
+					onclick="location.assign('/skill-test/<%= testName %>')"
+				>
+					<i class="bi bi-x-lg"></i>
+				</div>
+			</div>
+			<div class="col-md-10 col-9">
+				<div class="aback">
+					<div class="ascore"><span>25</span></div>
+					<div class="afront"></div>
+				</div>
+			</div>
+			<div class="col-md-1 col-1">
+				<div class="timer text-center">15:00</div>
+			</div>
+		</div>
+	</div>
+	<section class="question_box" id="<%= testName %>">
+		<section id="javascript_q25" class="question type3">
+			<h4 class="b-800 type1_question">
+				How to add external javascript file in html?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_1_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_1_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q24" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following part of this code is literal value?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_2.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>var</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>name</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>"John doe 🧑"</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>var name = "John Doe 🧑"</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q23" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which keyword is used to create variables in javascript?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>var</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>let</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>const</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>All of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q22" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What are the operators used in this code snippets?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_4.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Assignment</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Addition</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Declaration</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Both A and B</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q21" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which one is the correct syntax for creating javascript function?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_5_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_5_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q20" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				Find the javascript keyword that will return the type of the variable
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_6.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>type</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>typeof</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>vartype</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>datatype</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q19" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				How to access the author attribute of object book?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_7.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>book['author']</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>book.author</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>book=>author</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Both A and B</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q18" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How to delete the property from javascript object?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_8_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_8_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q17" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				How the update the property in javascript object?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>object.property = value</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>object.property : value</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>update object.property = value</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Objects are immutable</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q16" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How to make javascript object immutable(unchangeable)?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_10_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_10_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q15" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which one is the correct syntax for ES6 Arrow Function
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_11_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_11_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q14" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the name of the part of code which comes inside if statement?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_12.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>condition</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>expression</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Evaluation</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Both A and B</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q13" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How the exit the looping statement when particular condition met?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_13_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_13_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q12" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				How to remove duplicate items in an array?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_14.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>arr.flat();</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>[...arr];</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>arr.removeDuplicate();</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>[... new Set(arr)];</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q11" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which one is the correct syntax for array destructuring(es6)?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_15_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_15_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q10" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				Find the reason for output as true when using == operator?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_16.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>It doesn't compare datatype</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Both are numbers</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>In Same reference point</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>All of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q9" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which one is the correct syntax for template strings in javascript(es6)?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_17_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_17_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q8" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				How to find the length of an array in javascript?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_18.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>len(students)</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>studets.length()</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>students.length</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>students.count()</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q7" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How to set property to the HTML dom elements in javascript?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_19_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_19_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q6" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				how to select the html dom element with id "new" in javascript?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>getId("new");</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>getElementById("#new")</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>getElementById("new")</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>querySelector("new")</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q5" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How to change the href attribute to anchor element in javascript?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_21_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_21_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q4" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Correct syntax to get the current year using javascript date function?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_22_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_22_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q3" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How the access the next sibling element to the currentElement in
+				javascript?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_23_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_23_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q2" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				How the convert json data to javascript object?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../javascript/question_24.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>JSON.stringify(data)</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>JSON.parse(data)</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>data.object()</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>None of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="javascript_q1" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How the style the DOM elements in javascript?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_25_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../javascript/question_25_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section class="show_stats d-none">
+		<h3 class="b-700">Test Stats</h3>
+		<div class="row mt-4">
+			<div class="col-sm-4">
+				<div class="stats-box question_stats">
+					<p>Questions</p>
+					<h3 class="stat-1 b-700 blue-text">24 / 25</h3>
+					<p>18/25 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box score">
+					<p>Score</p>
+					<h3 class="stat-2 b-700 blue-text">300 / 375</h3>
+					<p>270/375 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box time_stats">
+					<p>Total Time</p>
+					<h3 class="stat-3 b-700 blue-text">13m 53s</h3>
+					<p>10m 23s average</p>
+				</div>
+			</div>
+		</div>
+		<div class="stat-footer" id="statBtn" style="text-align: right">
+			<button class="btn btn-blue-black mt-4">Continue</button>
+		</div>
+	</section>
+	<section class="feedback d-none">
+		<h3 class="b-700">How was the experience?</h3>
+		<div class="feedback-form mt-3">
+			<label
+				>Do you feel like the test accurately measured your skills?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-1 mt-2">
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">no</span>
+					<i class="bi bi-hand-thumbs-down-fill yellow-emoji"></i> No
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">somewhat</span>
+					<i class="bi bi-hand-thumbs-up-fill yellow-emoji"></i> Somewhat
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">yes</span>
+					<i class="bi bi-emoji-heart-eyes-fill yellow-emoji"></i>
+					Yes
+				</button>
+			</div>
+			<br />
+			<label
+				>How would you rate your overall experience?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-2 mt-2">
+				<div class="black-bg">
+					<span class="d-none">verybad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-frown-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">bad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-expressionless-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">average</span>
+					<i class="yellow-emoji-bg bi bi-emoji-neutral-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">good</span>
+					<i class="yellow-emoji-bg bi bi-emoji-smile-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">excellent</span>
+					<i class="yellow-emoji-bg bi bi-emoji-laughing-fill"></i>
+				</div>
+			</div>
+			<br />
+			<label>Anything else you'd like to add?</label>
+			<textarea
+				class="form-control"
+				rows="4"
+				id="review"
+				style="resize: none"
+				placeholder="I would improve the following."
+			></textarea>
+			<br />
+			<button class="btn btn-black-blue" disabled id="feedbackBtn">
+				Continue
+			</button>
+		</div>
+	</section>
+	<footer id="afooter">
+		<div class="submit-answer d-none">
+			<div class="submit">
+				<span>
+					<i class="bi bi-check-lg blue-text"></i>
+				</span>
+				<div class="answer">
+					<h4 class="b-800 blue-text">Submit answer</h4>
+					<p>
+						Something wrong with the question?
+						<a href="" class="blue-text bold">Provide feedback.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<button
+			class="btn btn-blue-black b-800 quizSubmit"
+			id="quizSubmit"
+			disabled
+			href=""
+		>
+			Submit
+		</button>
+	</footer>
+</section>
+<script src="../js/html_test.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

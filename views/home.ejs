@@ -1,0 +1,131 @@
+<%- include('./partials/header.ejs') -%>
+
+<link rel="stylesheet" href="../css/home.css" />
+<link rel="stylesheet" href="../css/publicprofile.css" />
+<% if (hasAccess) { %> <%- include('./partials/save.ejs') -%> <% } %>
+<section id="home-section" class="grid-container">
+	<% if (hasAccess) { %> <%- include('./partials/sidebar.ejs') -%> <% } else {
+	%> <%- include('./partials/homesidebar.ejs') -%> <% } %> <%-
+	include("./partials/downbar.ejs") -%>
+	<div class="grid-item main pt-4">
+		<main class="home-main">
+			<div class="row section-1">
+				<div class="col-xl-5 mt-4 heading-1">
+					<h1 class="heading display-3">
+						Where <span class="text-red">coding</span> <br />
+						<span class="text-red">careers</span> are built
+					</h1>
+					<p class="head-text mt-4" style="text-align: left">
+						Get the professional skills you need for the future of design &
+						coding. Learn new programming skills, verify your knowledge, and
+						develop your skills with Qxcel's interactive platform.
+					</p>
+					<a class="btn btn-dark mt-4" href="/all_skill_test" id="start">
+						Get started for free
+					</a>
+				</div>
+				<div class="col-xl-1"></div>
+				<div class="col-xl-6 animate-1">
+					<div class="anim-img">
+						<img src="../images/men.png" class="img-fluid" alt="" />
+					</div>
+					<div class="anim-text">Learn Coding</div>
+					<div class="shadow-box shadow-box1">
+						<div class="round"></div>
+						<div class="rectangle rectangle1"></div>
+					</div>
+					<div class="shadow-box shadow-box2">
+						<div class="round"></div>
+						<div class="rectangle rectangle2"></div>
+					</div>
+					<div class="shadow-box shadow-box3">
+						<div class="round"></div>
+						<div class="rectangle rectangle3"></div>
+					</div>
+					<div class="shadow-box shadow-box4">
+						<div class="round"></div>
+						<div class="rectangle rectangle4"></div>
+					</div>
+					<div class="lang-box lang-box1">
+						<div class="limg">
+							<img src="../images/html_tiny.png" class="img-fluid" alt="" />
+						</div>
+						<div class="rect-text">Html 5</div>
+					</div>
+					<div class="lang-box lang-box2">
+						<div class="limg">
+							<img
+								src="../images/javascript_tiny.png"
+								class="img-fluid"
+								alt=""
+							/>
+						</div>
+						<div class="rect-text">Javascript</div>
+					</div>
+					<div class="lang-box lang-box3">
+						<div class="limg">
+							<img src="../images/python_tiny.png" class="img-fluid" alt="" />
+						</div>
+						<div class="rect-text">Python 4</div>
+					</div>
+					<div class="lang-box lang-box4">
+						<div class="limg">
+							<img src="../images/react_tiny.png" class="img-fluid" alt="" />
+						</div>
+						<div class="rect-text">React.js</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-2 mt-3">
+				<div class="row mt-5">
+					<div class="col-lg-4 improve-box">
+						<div class="icon-home"><i class="bi bi-joystick"></i></div>
+						<h5>
+							Power up your coding <br />
+							& design skills
+						</h5>
+						<span class="text-muted"
+							>An interactive, gamified experience that's proven to help you
+							learn faster and retain information for longer.</span
+						>
+					</div>
+
+					<div class="col-lg-4 improve-box">
+						<div class="icon-home"><i class="bi bi-binoculars-fill"></i></div>
+						<h5>
+							Assessments dedicated to<br />
+							programming and design
+						</h5>
+						<span class="text-muted"
+							>Learn new coding skills from a growing and standard technologies
+						</span>
+					</div>
+
+					<div class="col-lg-4 improve-box">
+						<div class="icon-home"><i class="bi bi-book-fill"></i></div>
+						<h5>
+							Earn badges when <br />
+							you're in top 3%
+						</h5>
+						<span class="text-muted">
+							Every profile comes shareable to demonstrate your newly acquired
+							skills
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="section-3 mt-3 mb-5">
+				<h2 class="mb-3">
+					Build your professional profile <br />
+					& get strengthened
+				</h2>
+				<br />
+				<img src="../images/profile-strength.PNG" class="img-fluid" alt="" />
+			</div>
+		</main>
+	</div>
+</section>
+<script src="../js/sidebar.js"></script>
+<script src="../js/home.js"></script>
+
+<%- include('./partials/footer.ejs') -%>

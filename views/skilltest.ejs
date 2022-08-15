@@ -1,0 +1,257 @@
+<%- include('./partials/header.ejs') -%>
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/publicprofile.css" />
+<link rel="stylesheet" href="../css/skilltest.css" />
+<section id="skill-test" class="grid-container">
+	<!-- sidebar  -->
+	<%- include("./partials/sidebar.ejs") -%>
+	<!-- downbar  -->
+	<%- include("./partials/downbar.ejs") -%>
+	<!-- save modal -->
+	<%- include("./partials/save.ejs") %>
+	<div class="grid-item main">
+		<main class="skill-test-main pt-1">
+			<%- include('./partials/navbarback.ejs') -%>
+			<!-- nav end  -->
+			<div class="row mt-3" style="position: relative">
+				<div class="col-xl-8">
+					<div class="test-box">
+						<img src="../images/<%= data.stimg %>" class="img-fluid" alt="" />
+						<p class="mt-4" style="font-size: 0.85rem">SKILL TEST</p>
+						<h5 class="test-heading"><%= data.stname %></h5>
+						<p class="mt-3"><%= data.stdesc %></p>
+						<div class="startshare mt-4">
+							<% if (diff <= 0) { %>
+							<a href="<%= data.ststarturl %>" class="btn btn-red-black"
+								>Start Test</a
+							>
+							<div class="share">
+								<span class="copied d-none"
+									>Copied &nbsp;
+									<i style="font-size: 0.8rem" class="bi bi-clipboard-check"></i
+								></span>
+								&nbsp;&nbsp;
+								<i class="bi bi-link copylink"></i>
+							</div>
+							<% } else { %>
+							<button
+								onclick="location.href='<%= data.ststarturl %>'"
+								class="btn btn-red-black"
+								disabled
+							>
+								Start Test
+							</button>
+							<div class="share">
+								<span class="copied d-none">Copied</span> &nbsp;&nbsp;
+								<i class="bi bi-link copylink"></i>
+							</div>
+							<% } %>
+						</div>
+						<% if (diff > 0) { %>
+						<p class="mt-2" style="font-size: 0.9rem; color: #666">
+							<i class="bi bi-lock-fill"></i> &nbsp; Retake in <%= diff %> days
+						</p>
+						<% } %>
+						<div class="rules mt-4">
+							<p>
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+								<span>total</span>
+							</p>
+							<p>
+								<i class="bi bi-clock"></i> &nbsp; 15 minutes
+								<span>to complete the test</span>
+							</p>
+							<p>
+								<i class="bi bi-trophy"></i> &nbsp; Score in Top 3%
+								<span>and earn a badge</span>
+							</p>
+						</div>
+						<div class="instruction">
+							<p class="tab-heading tab-heading1 mt-4 m-0">Instructions</p>
+							<ul>
+								<li>Each question is timed</li>
+								<li>Do not use search engines or get help from others</li>
+								<li>Once you’ve submitted an answer, you cannot go back</li>
+								<li>
+									You may exit the test, but the timer will continue to run
+								</li>
+								<li>You can retake the skill test every 30 days</li>
+							</ul>
+						</div>
+						<div class="recommended">
+							<p class="tab-heading tab-heading2 mt-3 m-0">
+								Recommended Learning
+							</p>
+							<p class="mt-3">
+								<% if (data.sttype == 'html') { %>
+								<i class="bi bi-filetype-html"></i> &nbsp; <%=
+								data.strecommended %> <% } %>
+								<!-- html  -->
+								<% if (data.sttype == 'css') { %>
+								<i class="bi bi-filetype-css"></i> &nbsp; <%= data.strecommended
+								%> <% } %>
+								<!-- css  -->
+								<% if (data.sttype == 'java') { %>
+								<i class="bi bi-filetype-java"></i> &nbsp; <%=
+								data.strecommended %> <% } %>
+								<!-- java  -->
+								<% if (data.sttype == 'python') { %>
+								<i class="bi bi-filetype-py"></i> &nbsp; <%= data.strecommended
+								%> <% } %>
+								<!-- python  -->
+								<% if (data.sttype == 'javascript') { %>
+								<i class="bi bi-filetype-js"></i> &nbsp; <%= data.strecommended
+								%> <% } %>
+								<!-- javascript  -->
+								<% if (data.sttype == 'bootstrap') { %>
+								<i class="bi bi-bootstrap"></i> &nbsp; <%= data.strecommended %>
+								<% } %>
+								<!-- bootstrap  -->
+								<% if (data.sttype == 'jquery') { %>
+								<i class="bi bi-filetype-js"></i> &nbsp; <%= data.strecommended
+								%> <% } %>
+								<!-- jquery  -->
+								<% if (data.sttype == 'react') { %>
+								<i class="bi bi-filetype-jsx"></i> &nbsp; <%= data.strecommended
+								%> <% } %>
+								<!-- react  -->
+								<% if (data.sttype == 'android') { %>
+								<i class="bi bi-filetype-java"></i> &nbsp; <%=
+								data.strecommended %> <% } %>
+								<!-- java  -->
+								<% if (data.sttype == 'php') { %>
+								<i class="bi bi-filetype-php"></i> &nbsp; <%= data.strecommended
+								%> <% } %>
+								<!-- php  -->
+								<% if (data.sttype == 'sql') { %>
+								<img
+									width="20"
+									height="20"
+									src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-sql-file-types-dreamstale-lineal-dreamstale.png"
+								/>
+								&nbsp; <%= data.strecommended %> <% } %>
+							</p>
+						</div>
+						<div class="bestfor">
+							<p class="tab-heading tab-heading3 mt-4 m-0">Best for</p>
+							<p class="mt-3"><%= data.stbestfor %></p>
+						</div>
+						<div class="whyskilltest">
+							<p class="tab-heading tab-heading4 mt-4 m-0">Why Skill Tests</p>
+							<p class="mt-3">
+								Skill tests are essential for benchmarking your current design
+								knowledge. When you take a skill test, you’ll see how you
+								compare with other designers from around the world.
+							</p>
+						</div>
+						<div class="keyskills">
+							<p class="tab-heading tab-heading5 mt-4 m-0">Key skills</p>
+							<br />
+							<p class="mt-3 skill-tab"><%= data.stkeyskill %></p>
+						</div>
+						<div class="shareskill">
+							<p class="tab-heading tab-heading6 mt-4 m-0">
+								Share and save this skill test
+							</p>
+							<br />
+							<a href="javascript:void(0)" class="btn-share btn btn-light mt-3"
+								><i class="bi bi-share"></i> &nbsp; Share</a
+							>
+							&nbsp; <% if (langIndex === -1) { %>
+							<a
+								href="javascript:void(0)"
+								id="<%= data.sttype %>"
+								class="btn-save btn btn-light mt-3"
+							>
+								&nbsp; Save</a
+							>
+							<% } else { %>
+							<a
+								href="javascript:void(0)"
+								id="<%= data.sttype %>"
+								class="btn-save btn btn-blue text-light mt-3"
+								><i class="bi bi-check-lg"></i> &nbsp; Saved</a
+							>
+							<% } %>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4" style="margin-bottom: 4rem">
+					<% if (topScorers.length > 0) { %>
+					<div class="sticky-sidebar2">
+						<h5 class="popular-head pb-1">Top Scores</h5>
+						<% for (let i = 0; i < topScorers.length; i++) { %>
+						<div class="popular-skilltab mt-3 <%= i == 2 && 'no-border' %>">
+							<div class="popularimg">
+								<% if (topScorers[i]?.img) { %>
+								<img
+									src="<%= topScorers[i].img %>"
+									width="50"
+									height="50"
+									alt=""
+								/>
+								<% } else { %>
+								<img src="../images/man.png" width="50" height="40" alt="" />
+								<% } %>
+							</div>
+							<div class="populardesc px-3">
+								<% if (lenScore === 3) { %>
+								<a> <%= i == 2 ? '🥇' : i == 1 ? '🥈' : '🥉' %> </a>
+								<% } %> <% if (lenScore === 2) { %>
+								<a> <%= i == 0 ? '🥇' : '🥈' %> </a>
+								<% } %> <% if (lenScore === 1) { %>
+								<a> 🥇 </a>
+								<% } %> <% if (String(topScorers[i]?.id) ===
+								String(currentUser)) { %>
+								<a href="/public-profile/<%= topScorers[i]?.id %>">You</a>
+								<% } else { %>
+								<a href="/public-profile/<%= topScorers[i]?.id %>"
+									><%= topScorers[i]?.name %></a
+								>
+								<% } %>
+								<p><%= topScorers[i]?.role %></p>
+							</div>
+						</div>
+						<% } %>
+					</div>
+					<br />
+					<br />
+					<% } %>
+					<div class="sticky-sidebar1" style="padding-bottom: 2rem">
+						<h5 class="popular-head pb-1">Popular Skill Tests</h5>
+						<% data.stpopularskill.forEach((arr) => { %>
+						<div class="popular-skilltab mt-4 pb-2">
+							<div class="popularimg">
+								<img
+									src="../images/<%= arr.img %>"
+									width="50"
+									height="50"
+									alt=""
+								/>
+							</div>
+							<div class="populardesc px-3">
+								<a href="/skill-test/<%= arr.img.slice(0, -4) %>"
+									><%= arr.name %></a
+								>
+								<p>
+									<i class="bi bi-clock"></i>&nbsp;15 min &nbsp;
+									<i class="bi bi-question-circle"></i>&nbsp;25 questions
+								</p>
+							</div>
+						</div>
+						<% }) %>
+						<a class="btn btn-block btn-light py-2 w-100" href="/all_skill_test"
+							>View All</a
+						>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/skilltest.js"></script>
+
+<%- include('./partials/footer.ejs') -%>

@@ -1,0 +1,1481 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/assessment.css" />
+<link rel="stylesheet" href="../css/test_template.css" />
+<section id="java_test">
+	<div class="container-fluid" id="<%= currentUser %>">
+		<div class="atop row">
+			<div class="col-md-1 col-1 close-timer">
+				<div
+					class="close"
+					onclick="location.assign('/skill-test/<%= testName %>')"
+				>
+					<i class="bi bi-x-lg"></i>
+				</div>
+			</div>
+			<div class="col-md-10 col-9">
+				<div class="aback">
+					<div class="ascore"><span>25</span></div>
+					<div class="afront"></div>
+				</div>
+			</div>
+			<div class="col-md-1 col-1">
+				<div class="timer text-center">15:00</div>
+			</div>
+		</div>
+	</div>
+	<section class="question_box" id="<%= testName %>">
+		<section id="java_q25" class="question type1">
+			<h4 class="b-800 type1_question">Java is used to develop?</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Mobile apps</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Web apps</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Desktop apps</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>All of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q24" class="question type1 d-none">
+			<h4 class="b-800 type1_question">Java owned by</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Microsoft</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Google</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Oracle</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Amazon</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q23" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				File name of the java program must match with?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Class</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Constants</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Function</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Object</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q22" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				How to print a value to the screen in the java?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_4_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_4_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q21" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What does equalto(=) symbol mean in initialization of variable?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_5.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Extracting value from variable</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Allocate memory for variable</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Assign value to variable</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>None of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q20" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippet done manual type casting?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_6_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_6_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q19" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_7.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>-1</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>0</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>1</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Compile Error</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q18" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following below are not reserved keyword in java?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>if</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>goto</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>null</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>True</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q17" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What will be the output of the following code snippets?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_9.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>66</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>"66"</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>b</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>B</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q16" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_10.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>012345678910</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>0123456789</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>02468</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Compile Time Error</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q15" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets produces compilation error?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_11_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_11_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q14" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				In java, variables are only accesible inside the region they are
+				created. This is called?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Scope</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Block</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Function</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Both 1 & 2</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q13" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_13.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>abc</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>xyz</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>xyzabc</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>abcxyz</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q12" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				String uses a special memory location to reuse of String objects called?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>String memory pool</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>String constant pool</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Characters constant pool</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Characters memory pool</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q11" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_15.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>false</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>true</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>0</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>None of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q10" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the name of the following code which is highlighted?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_16.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Condition</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Statement</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Expression</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Both 1 & 3</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q9" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets produces output faster on Sum of N
+				natural numbers?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_17_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_17_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q8" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following data types is used by os to manage the recursion
+				in java?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Array</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Stack</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Queue</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Tree</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q7" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of these packages contains the exception Stack Overflow in java?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>java.util</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>java.io</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>java.lang</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>java.system</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q6" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the name of the following code which is highlighted?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_20.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Class</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Object</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Reference</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Pointer</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q5" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				When does method overloading is determined?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>At run time</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>At compile time</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>At coding time</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>At execution time</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q4" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				In the following code snippet which is constructor of the Test Class?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../java/question_22.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>public void test() {}</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>public Test() {}</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>int x;</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>All of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q3" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				What is it called where child object gets killed if parent object is
+				killed?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Aggregation</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Composition</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Encapsulation</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Association</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q2" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets is correctly inherits the
+				interface?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_24_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../java/question_24_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="java_q1" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which classes in java does Encapsulation helps in writing?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Mutable</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Abstract</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Immutable</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Wrapper</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section class="show_stats d-none">
+		<h3 class="b-700">Test Stats</h3>
+		<div class="row mt-4">
+			<div class="col-sm-4">
+				<div class="stats-box question_stats">
+					<p>Questions</p>
+					<h3 class="stat-1 b-700 blue-text">24 / 25</h3>
+					<p>18/25 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box score">
+					<p>Score</p>
+					<h3 class="stat-2 b-700 blue-text">300 / 375</h3>
+					<p>270/375 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box time_stats">
+					<p>Total Time</p>
+					<h3 class="stat-3 b-700 blue-text">13m 53s</h3>
+					<p>10m 23s average</p>
+				</div>
+			</div>
+		</div>
+		<div class="stat-footer" id="statBtn" style="text-align: right">
+			<button class="btn btn-blue-black mt-4">Continue</button>
+		</div>
+	</section>
+	<section class="feedback d-none">
+		<h3 class="b-700">How was the experience?</h3>
+		<div class="feedback-form mt-3">
+			<label
+				>Do you feel like the test accurately measured your skills?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-1 mt-2">
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">no</span>
+					<i class="bi bi-hand-thumbs-down-fill yellow-emoji"></i> No
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">somewhat</span>
+					<i class="bi bi-hand-thumbs-up-fill yellow-emoji"></i> Somewhat
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">yes</span>
+					<i class="bi bi-emoji-heart-eyes-fill yellow-emoji"></i>
+					Yes
+				</button>
+			</div>
+			<br />
+			<label
+				>How would you rate your overall experience?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-2 mt-2">
+				<div class="black-bg">
+					<span class="d-none">verybad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-frown-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">bad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-expressionless-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">average</span>
+					<i class="yellow-emoji-bg bi bi-emoji-neutral-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">good</span>
+					<i class="yellow-emoji-bg bi bi-emoji-smile-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">excellent</span>
+					<i class="yellow-emoji-bg bi bi-emoji-laughing-fill"></i>
+				</div>
+			</div>
+			<br />
+			<label>Anything else you'd like to add?</label>
+			<textarea
+				class="form-control"
+				rows="4"
+				id="review"
+				style="resize: none"
+				placeholder="I would improve the following."
+			></textarea>
+			<br />
+			<button class="btn btn-black-blue" disabled id="feedbackBtn">
+				Continue
+			</button>
+		</div>
+	</section>
+	<footer id="afooter">
+		<div class="submit-answer d-none">
+			<div class="submit">
+				<span>
+					<i class="bi bi-check-lg blue-text"></i>
+				</span>
+				<div class="answer">
+					<h4 class="b-800 blue-text">Submit answer</h4>
+					<p>
+						Something wrong with the question?
+						<a href="" class="blue-text bold">Provide feedback.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<button
+			class="btn btn-blue-black b-800 quizSubmit"
+			id="quizSubmit"
+			disabled
+			href=""
+		>
+			Submit
+		</button>
+	</footer>
+</section>
+<script src="../js/html_test.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

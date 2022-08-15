@@ -1,0 +1,1445 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/assessment.css" />
+<link rel="stylesheet" href="../css/test_template.css" />
+<section id="php_test">
+	<div class="container-fluid" id="<%= currentUser %>">
+		<div class="atop row">
+			<div class="col-md-1 col-1 close-timer">
+				<div
+					class="close"
+					onclick="location.assign('/skill-test/<%= testName %>')"
+				>
+					<i class="bi bi-x-lg"></i>
+				</div>
+			</div>
+			<div class="col-md-10 col-9">
+				<div class="aback">
+					<div class="ascore"><span>25</span></div>
+					<div class="afront"></div>
+				</div>
+			</div>
+			<div class="col-md-1 col-1">
+				<div class="timer text-center">15:00</div>
+			</div>
+		</div>
+	</div>
+	<section class="question_box" id="<%= testName %>">
+		<section id="php_q25" class="question type1">
+			<h4 class="b-800 type1_question">What is PHP?</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type_option_lg type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>PHP is a open-source programming language</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>PHP is used to develop dynamic and interactive websites</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>PHP is a server-side scripting language</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type_option_lg type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>All of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q24" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following is the correct way to add comment in PHP code?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>#</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>//</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>/* */</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>All of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q23" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet in php?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_3.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Learn $course in $src</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Learn $PHP in $W3Schools.com</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Learn PHP in W3Schools.com</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>None of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q22" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the purpose of the var_dump() function in php?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_4.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Return datatype of variable</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Return datatype & value of variable</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Return value of variable</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Return memory address of variable</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q21" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets used to find length of string?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_5_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_5_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q20" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet in php?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_6.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>2</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>3</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>13</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>5</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q19" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which is the right way of declaring a variable in PHP?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>$_hello</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>$3hello</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>$this</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>$5_Hello</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q18" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets used to create constant variable?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_8_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_8_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q17" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet in php?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_9.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>12</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>13</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>22</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>23</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q16" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet in php?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_10.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>EverthingAlmost</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Everything Almost</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Everything" "Almost</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Almost Everything</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q15" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following PHP functions can be used for generating unique
+				ids?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>md5()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>uniqueid()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>mdid()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>id()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q14" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets produces compilation error?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_12_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_12_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q13" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				How many type of loops in php scripting language?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>3</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>5</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>4</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>2</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q12" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				In PHP foreach loop, what is the name of highlighted part?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_14.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>String</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Object</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Array</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>Boolean</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q11" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets get last number?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_15_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_15_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q10" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				What are the types of array in php programming language?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Indexed</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Multidimensional</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Associative</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>All of the above</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q9" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_17.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Python,Javascript</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>$Python,$Javascript</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>$Python$Javascript</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>PythonJavascript</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q8" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				Which PHP function displays the web page’s most recent modification
+				date?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>getlastmod()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>get_last_mod()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>lastmod()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>last_mod()</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q7" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_19.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>12</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>120</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>121</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>1</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q6" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following is not lead to infinite loop?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_20_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_20_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q5" class="question type2 d-none">
+			<h4 class="b-800 type1_question">
+				What is the output of the following code snippet?
+			</h4>
+			<div class="row">
+				<div
+					class="col-lg-6"
+					style="display: flex; margin-top: 2rem; justify-content: center"
+				>
+					<div class="type2_img">
+						<img
+							src="../php/question_21.PNG"
+							class="choice-img img-fluid"
+							alt=""
+						/>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="type_options type1_options">
+						<div class="type_option type1_option1">
+							<div class="option_and_number">
+								<span class="optionno">1</span>
+								<p>Infinite Loop</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option2">
+							<div class="option_and_number">
+								<span class="optionno">2</span>
+								<p>Executes One Time</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option3">
+							<div class="option_and_number">
+								<span class="optionno">3</span>
+								<p>Parse Error</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+						<div class="type_option type1_option4">
+							<div class="option_and_number">
+								<span class="optionno">4</span>
+								<p>None of the above</p>
+							</div>
+							<div class="correct_option d-none">
+								<span class="blue-text"
+									><i class="bi bi-check-circle-fill"></i
+								></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q4" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				setcookie() function must appear before the
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>&lt;body&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>&lt;html&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>&lt;script&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>&lt;head&gt;</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q3" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				What is the name of function to start the session in php?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_23_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_23_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q2" class="question type1 d-none">
+			<h4 class="b-800 type1_question">
+				What is the following advanced OOP features is/are not supported by php?
+			</h4>
+			<div class="type_options type1_options">
+				<div class="type_option type1_option1">
+					<div class="option_and_number">
+						<span class="optionno">1</span>
+						<p>Method overloading</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option2">
+					<div class="option_and_number">
+						<span class="optionno">2</span>
+						<p>Multiple Inheritance</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option3">
+					<div class="option_and_number">
+						<span class="optionno">3</span>
+						<p>Namespaces</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+				<div class="type_option type1_option4">
+					<div class="option_and_number">
+						<span class="optionno">4</span>
+						<p>Object Cloning</p>
+					</div>
+					<div class="correct_option d-none">
+						<span class="blue-text"
+							><i class="bi bi-check-circle-fill"></i
+						></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="php_q1" class="question type3 d-none">
+			<h4 class="b-800 type1_question">
+				Which of the following code snippets correctly defines constructor in
+				php?
+			</h4>
+			<div class="row mt-5">
+				<div class="col-sm-6">
+					<div class="type3-box" style="width: 100%">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_25_1.PNG"
+							class="type3-img type3-img1 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">1</span>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="type3-box">
+						<div class="img-selected d-none">
+							<span><i class="bi bi-check-lg"></i></span>
+						</div>
+						<img
+							src="../php/question_25_2.PNG"
+							class="type3-img type3-img2 img-fluid"
+							alt=""
+						/>
+						<span class="d-none">2</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section class="show_stats d-none">
+		<h3 class="b-700">Test Stats</h3>
+		<div class="row mt-4">
+			<div class="col-sm-4">
+				<div class="stats-box question_stats">
+					<p>Questions</p>
+					<h3 class="stat-1 b-700 blue-text">24 / 25</h3>
+					<p>18/25 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box score">
+					<p>Score</p>
+					<h3 class="stat-2 b-700 blue-text">300 / 375</h3>
+					<p>270/375 average</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="stats-box time_stats">
+					<p>Total Time</p>
+					<h3 class="stat-3 b-700 blue-text">13m 53s</h3>
+					<p>10m 23s average</p>
+				</div>
+			</div>
+		</div>
+		<div class="stat-footer" id="statBtn" style="text-align: right">
+			<button class="btn btn-blue-black mt-4">Continue</button>
+		</div>
+	</section>
+	<section class="feedback d-none">
+		<h3 class="b-700">How was the experience?</h3>
+		<div class="feedback-form mt-3">
+			<label
+				>Do you feel like the test accurately measured your skills?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-1 mt-2">
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">no</span>
+					<i class="bi bi-hand-thumbs-down-fill yellow-emoji"></i> No
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">somewhat</span>
+					<i class="bi bi-hand-thumbs-up-fill yellow-emoji"></i> Somewhat
+				</button>
+				&nbsp;
+				<button class="btn btn-light feedbtn">
+					<span class="d-none">yes</span>
+					<i class="bi bi-emoji-heart-eyes-fill yellow-emoji"></i>
+					Yes
+				</button>
+			</div>
+			<br />
+			<label
+				>How would you rate your overall experience?
+				<strong class="bold" style="color: #ff2442">*</strong></label
+			>
+			<div class="feedback-2 mt-2">
+				<div class="black-bg">
+					<span class="d-none">verybad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-frown-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">bad</span>
+					<i class="yellow-emoji-bg bi bi-emoji-expressionless-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">average</span>
+					<i class="yellow-emoji-bg bi bi-emoji-neutral-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">good</span>
+					<i class="yellow-emoji-bg bi bi-emoji-smile-fill"></i>
+				</div>
+				<div class="black-bg">
+					<span class="d-none">excellent</span>
+					<i class="yellow-emoji-bg bi bi-emoji-laughing-fill"></i>
+				</div>
+			</div>
+			<br />
+			<label>Anything else you'd like to add?</label>
+			<textarea
+				class="form-control"
+				rows="4"
+				id="review"
+				style="resize: none"
+				placeholder="I would improve the following."
+			></textarea>
+			<br />
+			<button class="btn btn-black-blue" disabled id="feedbackBtn">
+				Continue
+			</button>
+		</div>
+	</section>
+	<footer id="afooter">
+		<div class="submit-answer d-none">
+			<div class="submit">
+				<span>
+					<i class="bi bi-check-lg blue-text"></i>
+				</span>
+				<div class="answer">
+					<h4 class="b-800 blue-text">Submit answer</h4>
+					<p>
+						Something wrong with the question?
+						<a href="" class="blue-text bold">Provide feedback.</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<button
+			class="btn btn-blue-black b-800 quizSubmit"
+			id="quizSubmit"
+			disabled
+			href=""
+		>
+			Submit
+		</button>
+	</footer>
+</section>
+<script src="../js/html_test.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

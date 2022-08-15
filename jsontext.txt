@@ -1,0 +1,267 @@
+[
+    {
+        "sttype": "html",
+        "stimg": "html.png",
+        "stname": "HTML Skill Test",
+        "stdesc": "Test your understanding of elements, tags, attributes, and how to use them.",
+        "ststarturl": "/assessment/html",
+        "strecommended": "HTML for beginners",
+        "stbestfor": "Beginners with a basic knowledge of HTML 5",
+        "stkeyskill": "HTML",
+        "stpopularskill": [
+            {
+                "img": "css.png",
+                "name": "CSS Skill Test"
+            },
+            {
+                "img": "javascript.png",
+                "name": "Javascript Skill Test"
+            },
+            {
+                "img": "php.png",
+                "name": "PHP Skill Test",
+                "lang": ""
+            }
+        ]
+    },
+    {
+        "sttype": "css",
+        "stimg": "css.png",
+        "stname": "CSS Skill Test",
+        "stdesc": "Test how well you know CSS rules, properties, and selectors.",
+        "ststarturl": "/assessment/css",
+        "strecommended": "CSS for beginners",
+        "stbestfor": "Beginners with a basic knowledge of CSS 3",
+        "stkeyskill": "CSS",
+        "stpopularskill": [
+           {
+                "img": "html.png",
+                "name": "HTML Skill Test"
+            },
+            {
+                "img": "bootstrap.png",
+                "name": "Bootstrap Skill Test"
+            },
+            {
+                "img": "php.png",
+                "name": "PHP Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "java",
+        "stimg": "java.png",
+        "stname": "Java Skill Test",
+        "stdesc": "Test your understanding of object oriented programming in Java",
+        "ststarturl": "/assessment/java",
+        "strecommended": "Java for beginners",
+        "stbestfor": "Beginners with a basic knowledge of java",
+        "stkeyskill": "Java",
+        "stpopularskill": [
+           {
+                "img": "python.png",
+                "name": "Python Skill Test"
+            },
+            {
+                "img": "javascript.png",
+                "name": "JavaScript Skill Test"
+            },
+            {
+                "img": "php.png",
+                "name": "PHP Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "python",
+        "stimg": "python.png",
+        "stname": "Python Skill Test",
+        "stdesc": "Test your understanding of programming in python",
+        "ststarturl": "/assessment/python",
+        "strecommended": "Python for beginners",
+        "stbestfor": "Beginners with a basic knowledge of python",
+        "stkeyskill": "Python",
+        "stpopularskill": [
+           {
+                "img": "java.png",
+                "name": "Java Skill Test"
+            },
+            {
+                "img": "javascript.png",
+                "name": "JavaScript Skill Test"
+            },
+            {
+                "img": "php.png",
+                "name": "PHP Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "javascript",
+        "stimg": "javascript.png",
+        "stname": "Javascript Skill Test",
+        "stdesc": "Test your understanding of programming in javascript",
+        "ststarturl": "/assessment/javascript",
+        "strecommended": "JavaScript for beginners",
+        "stbestfor": "Beginners with a basic knowledge of javascript and es6 (modern javascript)",
+        "stkeyskill": "Python",
+        "stpopularskill": [
+           {
+                "img": "jquery.png",
+                "name": "Jquery Skill Test"
+            },
+            {
+                "img": "python.png",
+                "name": "Python Skill Test"
+            },
+            {
+                "img": "react.png",
+                "name": "React Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "bootstrap",
+        "stimg": "bootstrap.png",
+        "stname": "Bootstrap Skill Test",
+        "stdesc": "Test your understanding of popular css framework bootstrap",
+        "ststarturl": "/assessment/bootstrap",
+        "strecommended": "Bootstrap for beginners",
+        "stbestfor": "Beginners with a basic knowledge of current version on bootstrap",
+        "stkeyskill": "Bootstrap",
+        "stpopularskill": [
+           {
+                "img": "css.png",
+                "name": "CSS Skill Test"
+            },
+            {
+                "img": "javascript.png",
+                "name": "Javascript Skill Test"
+            },
+            {
+                "img": "react.png",
+                "name": "React Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "jquery",
+        "stimg": "jquery.png",
+        "stname": "Jquery Skill Test",
+        "stdesc": "Test your understanding of jquery the javascript library",
+        "ststarturl": "/assessment/bootstrap",
+        "strecommended": "Jquery for beginners",
+        "stbestfor": "Beginners with a basic knowledge of jquery",
+        "stkeyskill": "Jquery",
+        "stpopularskill": [
+           {
+                "img": "javascript.png",
+                "name": "Javascript Skill Test"
+            },
+            {
+                "img": "css.png",
+                "name": "CSS Skill Test"
+            },
+            {
+                "img": "php.png",
+                "name": "PHP Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "react",
+        "stimg": "react.png",
+        "stname": "React Skill Test",
+        "stdesc": "Test your understanding of the most popular frontend framework react.js",
+        "ststarturl": "/assessment/react",
+        "strecommended": "React for beginners",
+        "stbestfor": "Beginners with a basic knowledge of react and jsx",
+        "stkeyskill": "React.js",
+        "stpopularskill": [
+           {
+                "img": "javascript.png",
+                "name": "Javascript Skill Test"
+            },
+            {
+                "img": "css.png",
+                "name": "CSS Skill Test"
+            },
+            {
+                "img": "bootstrap.png",
+                "name": "Bootstrap Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "android",
+        "stimg": "android.png",
+        "stname": "Android Skill Test",
+        "stdesc": "Test your understanding of the android for java",
+        "ststarturl": "/assessment/android",
+        "strecommended": "Android for beginners",
+        "stbestfor": "Beginners with a basic knowledge of android",
+        "stkeyskill": "Android",
+        "stpopularskill": [
+           {
+                "img": "java.png",
+                "name": "Java Skill Test"
+            },
+            {
+                "img": "javascript.png",
+                "name": "Javascript Skill Test"
+            },
+            {
+                "img": "react.png",
+                "name": "React Skill Test"
+            }
+        ]
+    }, 
+    {
+        "sttype": "php",
+        "stimg": "php.png",
+        "stname": "PHP Skill Test",
+        "stdesc": "Test your understanding of the php",
+        "ststarturl": "/assessment/php",
+        "strecommended": "PHP for beginners",
+        "stbestfor": "Beginners with a basic knowledge of php the scripting language",
+        "stkeyskill": "PHP",
+        "stpopularskill": [
+           {
+                "img": "html.png",
+                "name": "HTML Skill Test"
+            },
+            {
+                "img": "javascript.png",
+                "name": "Javascript Skill Test"
+            },
+            {
+                "img": "jquery.png",
+                "name": "Jquery Skill Test"
+            }
+        ]
+    },
+    {
+        "sttype": "sql",
+        "stimg": "sql.png",
+        "stname": "SQL Skill Test",
+        "stdesc": "Test your understanding of the sql",
+        "ststarturl": "/assessment/sql",
+        "strecommended": "SQL for beginners",
+        "stbestfor": "Beginners with a basic knowledge of sql",
+        "stkeyskill": "SQL",
+        "stpopularskill": [
+           {
+                "img": "javascript.png",
+                "name": "Javascript Skill Test"
+            },
+            {
+                "img": "php.png",
+                "name": "PHP Skill Test"
+            },
+            {
+                "img": "python.png",
+                "name": "Python Skill Test"
+            }
+        ]
+    }
+]

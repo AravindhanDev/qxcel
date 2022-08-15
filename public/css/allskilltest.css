@@ -1,0 +1,152 @@
+.recommend {
+	display: inline-block;
+	padding: 0.4rem 1rem;
+	border-radius: 20px;
+	cursor: pointer;
+	color: var(--secondary-color);
+	background: rgba(205, 205, 207, 0.2);
+}
+
+.recommend:hover {
+	background: rgba(205, 205, 207, 0.4);
+}
+
+.row {
+	margin: 0.1rem;
+}
+
+.tabs {
+	border-bottom: 1px solid var(--ee-color);
+}
+
+.tab-1,
+.tab-2 {
+	font-weight: 700;
+	cursor: pointer;
+	color: var(--black-seven);
+	white-space: nowrap;
+	padding-bottom: 1rem;
+}
+
+.tab-1:hover,
+.tab-2:hover {
+	color: var(--secondary-color);
+}
+
+.tab-1 {
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--secondary-color);
+}
+
+.tab-2 {
+	margin-left: 2rem;
+}
+
+.tab-1 span,
+.tab-2 span {
+	padding-left: 0.5rem;
+	color: var(--secondary-color);
+	font-weight: 300;
+}
+
+.skill_test-container div {
+	margin-bottom: 1rem;
+}
+
+.all-skill-box {
+	display: flex;
+	justify-content: space-around;
+	border: 1px solid var(--ed-color);
+	background-color: var(--dark-text-hover);
+	border-radius: 20px;
+	padding: 1.3rem 0.5rem 0;
+	cursor: pointer;
+	margin-bottom: 2rem;
+}
+
+.all-skill-img img {
+	width: 50px;
+	height: 50px;
+}
+
+.all-skill-box:hover {
+	background: var(--ecf-color);
+	border: 1px solid var(--dd-color);
+	transition: all 0.3s;
+}
+
+.all-skill-desc {
+	white-space: nowrap;
+}
+
+.all-skill-name {
+	font-weight: 800;
+}
+
+.all-skill-icon {
+	font-weight: 500;
+	color: var(--black-light);
+}
+
+.all-skill-icon i {
+	color: var(--pure-black-color);
+}
+
+@media (max-width: 600px) {
+	.tab-1,
+	.tab-2 {
+		font-size: 0.9rem;
+	}
+	.recommend {
+		padding: 0.2rem 0.5rem;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.all-skill-img img {
+		width: 40px;
+		height: 40px;
+	}
+	.all-skill-name {
+		font-size: 2vw;
+	}
+	.all-skill-icon {
+		font-size: 2vw;
+	}
+}
+
+@media (max-width: 576px) {
+	.all-skill-img img {
+		width: 40px;
+		height: 40px;
+	}
+	.all-skill-name {
+		font-size: 20px;
+	}
+	.all-skill-icon {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 500px) {
+	.recommend {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	main {
+		padding: 1rem;
+	}
+	.all-skill-img img {
+		width: 40px;
+		height: 40px;
+	}
+	.all-skill-name {
+		font-size: 18px;
+	}
+	.all-skill-icon {
+		font-size: 14px;
+	}
+}

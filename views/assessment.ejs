@@ -1,0 +1,94 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/assessment.css" />
+<section id="assessment">
+	<div class="container-fluid">
+		<div class="atop row">
+			<div class="col-md-1 col-2">
+				<div class="close" onclick="history.go(-1)">
+					<i class="bi bi-x-lg"></i>
+				</div>
+			</div>
+			<div class="col-md-10 col-8">
+				<div class="aback">
+					<div class="ascore"><span>25</span></div>
+					<div class="afront"></div>
+				</div>
+			</div>
+			<div class="col-md-1 col-2">
+				<div class="timer text-center">15:00</div>
+			</div>
+		</div>
+		<div class="acontent">
+			<div class="img">
+				<img src="../images/<%= imgURL %>" alt="" width="120" height="120" />
+			</div>
+			<h5 class="b-800 mt-5 aname"><%= testName %></h5>
+			<p style="font-size: 0.9rem">
+				<i class="bi bi-clock"></i>&nbsp;15 min &nbsp;
+				<i class="bi bi-question-circle"></i>&nbsp;25 questions
+			</p>
+		</div>
+		<div class="ainstruction">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="inst instruction1">
+						<div class="aicon"><i class="bi bi-clock"></i></div>
+						<div class="adesc">
+							<p class="b-700">Keep your eye on the timer</p>
+							<p style="font-size: 0.9rem">
+								Every skill test has a time limit. The clock starts ticking when
+								you click Start Now.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="inst instruction2">
+						<div class="aicon"><i class="bi bi-mouse"></i></div>
+						<div class="adesc">
+							<p class="b-700">Keep your mouse in the skill test window</p>
+							<p style="font-size: 0.9rem">
+								Keep your mouse in the assessment window for the entire duration
+								of the test.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="inst instruction3">
+						<div class="aicon"><i class="bi bi-calendar-week"></i></div>
+						<div class="adesc">
+							<p class="b-700">Retake every 7 days</p>
+							<p style="font-size: 0.9rem">
+								Once you’ve completed the test, you’ll need to wait 7 days
+								before you can take it again.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="inst instruction4">
+						<div class="aicon"><i class="bi bi-pc-display-horizontal"></i></div>
+						<div class="adesc">
+							<p class="b-700">Use a desktop computer</p>
+							<p style="font-size: 0.9rem">
+								For overall comfort and ease, we recommend using a desktop
+								computer.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer id="afooter">
+			<a
+				class="btn btn-lg btn-black-blue b-800 startnow"
+				href="/quiz/<%= type %>"
+				>Start Now</a
+			>
+		</footer>
+	</div>
+</section>
+
+<%- include("./partials/footer.ejs") -%>

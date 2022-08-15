@@ -1,0 +1,17 @@
+body {
+	background-color: var(--dark-text-hover);
+	color: var(--secondary-color);
+	padding: 2rem;
+}
+
+@media (max-width: 450px) {
+	body {
+		padding: 1.3rem;
+	}
+}
+
+p,
+ul,
+li {
+	font-size: 0.9rem;
+}

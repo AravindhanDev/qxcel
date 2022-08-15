@@ -1,0 +1,159 @@
+#profile-strength {
+	background-color: var(--dark-text-hover);
+	border: 1px solid var(--ee-color);
+	border-radius: 20px;
+	padding: 1.5rem;
+}
+
+#course-status {
+	background-color: var(--dark-text-hover);
+	border: 1px solid var(--ee-color);
+	border-radius: 20px;
+	padding: 1.5rem;
+}
+
+.profile_strength_bar {
+	margin-top: 5rem;
+}
+
+.layer {
+	width: 100%;
+	border-radius: 10px;
+	background-color: var(--ffivefsix-color);
+	position: relative;
+}
+
+.fill {
+	width: 0%;
+	background-color: var(--primary-color);
+	border-radius: 10px;
+	padding: 0.5rem;
+	transition: all 0.5s;
+}
+
+.bar_round {
+	position: absolute;
+	top: -10px;
+	color: var(--dark-box);
+	background-color: var(--ffivefsix-color);
+	border: 1px solid var(--secondary-hover);
+	box-shadow: 2px 2px 6px #666;
+	border-radius: 50%;
+	width: 38px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+.bar_round1 {
+	right: 64%;
+}
+
+.bar_round2 {
+	right: 32%;
+}
+
+.bar_round3 {
+	right: 0;
+}
+
+.bar_desc3 {
+	right: 0;
+}
+
+.bar_desc2 {
+	right: 32%;
+}
+
+.bar_desc1 {
+	right: 64%;
+}
+
+.bar_desc {
+	top: -50px;
+	background-color: var(--ffivefsix-color);
+	padding: 0.3rem 0.6rem;
+	border-radius: 10px;
+	position: absolute;
+	color: var(--dark-box);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 0.6rem;
+	letter-spacing: 1px;
+}
+
+.complete_status p {
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: var(--label-color);
+}
+
+.detail_box {
+	border: 1px solid var(--ee-color);
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.detail_box p {
+	margin-top: 1rem;
+}
+
+.detail_box:hover {
+	background: var(--ffivefsix-color);
+}
+
+.detail_box .icon {
+	color: var(--ee-color);
+	font-size: 1.2rem;
+}
+
+.completed {
+	background-color: var(--green-light);
+	border: 1px solid transparent;
+}
+
+.completed:hover {
+	background-color: var(--green-light);
+}
+
+.completed .icon {
+	color: var(--green-color);
+}
+
+@media (max-width: 650px) {
+	.bar_desc {
+		padding: 0.1rem 0.3rem;
+		font-size: 0.5rem;
+		letter-spacing: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	.row > * {
+		padding: 0;
+	}
+	.bar_desc3 {
+		right: 0;
+	}
+	.bar_desc2 {
+		right: 50%;
+	}
+	.bar_desc1 {
+		right: 80%;
+	}
+}
+
+@media (max-width: 450px) {
+	.main {
+		padding: 0 !important;
+		width: 100vw;
+	}
+	.main-strength {
+		padding: 0 1rem;
+		margin-bottom: 3rem;
+	}
+}

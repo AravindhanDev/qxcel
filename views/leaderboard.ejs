@@ -1,0 +1,85 @@
+<%- include('./partials/header.ejs') -%>
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/publicprofile.css" />
+<link rel="stylesheet" href="../css/leaderboard.css" />
+<section id="skill-test" class="grid-container">
+	<!-- sidebar  -->
+	<%- include("./partials/sidebar.ejs") -%>
+	<!-- downbar  -->
+	<%- include("./partials/downbar.ejs") -%>
+	<!-- saved -->
+	<%- include("./partials/save.ejs") -%>
+	<!-- save modal -->
+	<div class="grid-item main">
+		<main class="pt-2">
+			<%- include('./partials/navbarback.ejs') -%>
+			<!-- nav end  -->
+			<div class="row mt-2" style="position: relative">
+				<div class="col-md-8 mb-2">
+					<div class="text-box_header">
+						<h4 style="font-weight: bold; text-align: left">
+							Top 10 Pixel Earners
+						</h4>
+						<select id="lang" class="form-select mb-3">
+							<option value="html">HTML 5</option>
+							<option value="css">CSS 3</option>
+							<option value="java">Java</option>
+							<option value="python">Python</option>
+							<option value="javascript">Javascript</option>
+							<option value="bootstrap">Bootstrap</option>
+							<option value="jquery">jQuery</option>
+							<option value="react">React.js</option>
+							<option value="android">Android</option>
+							<option value="php">PHP</option>
+							<option value="sql">SQL</option>
+						</select>
+					</div>
+					<div class="test-box">
+						<div class="leaders_box">
+							<div class="loading-box1 row">
+								<div class="col-1 loading-box"></div>
+								<div class="col-1"></div>
+								<div class="col-3 loading-box"></div>
+								<div class="col-1"></div>
+								<div class="col-5 loading-box"></div>
+							</div>
+							<div class="loading-box2 row mt-5">
+								<div class="col-1 loading-box"></div>
+								<div class="col-1"></div>
+								<div class="col-3 loading-box"></div>
+								<div class="col-1"></div>
+								<div class="col-5 loading-box"></div>
+							</div>
+
+							<!-- Data to be embedded here -->
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 compete mb-3">
+					<div class="shareProfile">
+						<h5 class="b-700">
+							Compete with your <span>friends and community</span>
+						</h5>
+						<p class="mt-3">
+							Learning is always more fun in good company. Share your invite
+							link with your friends and coworkers to compete together on the
+							leaderboard.
+						</p>
+						<button
+							class="mt-3 btn btn-white w-100 b-700"
+							id="btn-shareprofile"
+						>
+							Invite a friend
+						</button>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/leaderboard.js"></script>
+<!-- <script src="../js/skilltest.js"></script> -->
+<%- include('./partials/footer.ejs') -%>

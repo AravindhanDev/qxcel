@@ -1,0 +1,8 @@
+html - https://i.postimg.cc/dtRyT11f/html.png
+css - https://i.postimg.cc/3NmD1rZd/css.png
+js - https://i.postimg.cc/RZMn1BJZ/js.png
+java - https://i.postimg.cc/yYCRd9V9/java.png
+python - https://i.postimg.cc/rps0bNJ6/python.png
+jquery - https://i.postimg.cc/ZYd34jh4/jquery.png
+bootstrap - https://i.postimg.cc/nz6Dq9By/bootstrap.png
+php - https://i.postimg.cc/GmqTq5vJ/php.png

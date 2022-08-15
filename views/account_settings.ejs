@@ -1,0 +1,62 @@
+<%- include('./partials/header.ejs') -%>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="../css/accountsettings.css" />
+<section id="skill-test" class="grid-container">
+	<!-- sidebar  -->
+	<%- include("./partials/sidebar.ejs") -%>
+	<!-- downbar  -->
+	<%- include("./partials/downbar.ejs") -%>
+	<!-- save modal -->
+	<div class="grid-item main">
+		<main class="pt-2">
+			<div class="row mt-2" style="position: relative">
+				<h2 style="font-weight: 900">Account</h2>
+				<div class="user-form mt-5">
+					<div class="form-group">
+						<label for="">Username</label>
+						<input
+							type="text"
+							class="mt-2 form-control"
+							value="<%=name%>"
+							disabled
+						/>
+						<div class="form-text">
+							To add a custom username to your account,
+							<a href="/public-profile/<%= currentUser %>"
+								>update your profile</a
+							>
+						</div>
+					</div>
+					<div class="form-group mt-4">
+						<label for="">Email</label>
+						<input
+							type="text"
+							id="email"
+							class="mt-2 form-control"
+							value="<%= email %>"
+							disabled
+						/>
+						<div class="form-text">
+							To change your email
+							<a href="javascript:void(0)" class="0" id="updateEmail"
+								>click here</a
+							>,
+						</div>
+					</div>
+				</div>
+				<div class="delete-acc mt-5">
+					<h6 id="deleteAccount">Delete Account</h6>
+					<div class="form-text">
+						We’d hate to see you go, but you’re welcome to delete your account
+						anytime. Just remember, once you delete it, it’s gone forever.
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/accountSettings.js"></script>
+<%- include('./partials/footer.ejs') -%>

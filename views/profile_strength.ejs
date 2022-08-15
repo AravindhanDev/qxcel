@@ -1,0 +1,209 @@
+<%- include('./partials/header.ejs') -%>
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/profilestrength.css" />
+<section id="skill-test" class="grid-container">
+	<!-- sidebar  -->
+	<%- include("./partials/sidebar.ejs") -%>
+	<!-- downbar  -->
+	<%- include("./partials/downbar.ejs") -%>
+	<!-- save modal -->
+	<div class="grid-item main">
+		<main class="pt-1 main-strength">
+			<div class="row mt-3" style="position: relative">
+				<div class="col-lg-8 mb-3">
+					<div id="profile-strength">
+						<h4 style="font-weight: 800">Profile Strength</h4>
+						<div class="form-text">
+							<i class="bi bi-lightning-charge-fill"></i> &nbsp; Your profile
+							cannot be found by recruiters until you unlock Fast Apply
+						</div>
+						<div class="profile_strength_bar">
+							<div class="layer">
+								<% if (total == 0) { %>
+								<div class="fill" style="width: 0%"></div>
+								<% } else if (total == 25) { %>
+								<div class="fill" style="width: 25%"></div>
+								<% } else if (total == 50) { %>
+								<div class="fill" style="width: 50%"></div>
+								<% } else if (total == 75) { %>
+								<div class="fill" style="width: 75%"></div>
+								<% } else if (total == 100) { %>
+								<div class="fill" style="width: 100%"></div>
+								<% } %>
+								<div class="bar_round bar_round1">
+									<% if (total >= 50) { %>
+									<i
+										style="color: var(--primary-color)"
+										class="bi bi-person-bounding-box"
+									></i>
+									<% } else { %>
+									<i
+										style="color: var(--secondary-color)"
+										class="bi bi-person-bounding-box"
+									></i>
+									<% } %>
+								</div>
+								<div class="bar_round bar_round2">
+									<% if (total >= 75) { %>
+									<i
+										style="color: var(--primary-color)"
+										class="bi bi-lightning-fill"
+									></i>
+									<% } else { %>
+									<i
+										style="color: var(--secondary-color)"
+										class="bi bi-lightning-fill"
+									></i>
+									<% } %>
+								</div>
+								<div class="bar_round bar_round3">
+									<% if (total == 100) { %>
+									<i
+										style="color: var(--primary-color)"
+										class="bi bi-patch-check-fill"
+									></i>
+									<% } else { %>
+									<i
+										style="color: var(--secondary-color)"
+										class="bi bi-patch-check-fill"
+									></i>
+									<% } %>
+								</div>
+
+								<% if (total >= 50) { %>
+								<div
+									style="color: var(--primary-color)"
+									class="bar_desc bar_desc1"
+								>
+									Profile Matching
+								</div>
+
+								<% } else { %>
+								<div class="bar_desc bar_desc1">Profile Matching</div>
+
+								<% } %> <% if (total >= 75) { %>
+								<div
+									style="color: var(--primary-color)"
+									class="bar_desc bar_desc2"
+								>
+									Fast Growth
+								</div>
+
+								<% } else { %>
+								<div class="bar_desc bar_desc2">Fast Growth</div>
+
+								<% } %> <% if (total == 100) { %>
+								<div
+									style="color: var(--primary-color)"
+									class="bar_desc bar_desc3"
+								>
+									Verified Programmer
+								</div>
+
+								<% } else { %>
+								<div class="bar_desc bar_desc3">Verified Programmer</div>
+
+								<% } %>
+							</div>
+						</div>
+						<div class="complete_status mt-5">
+							<p>STEPS TO COMPLETE</p>
+							<div class="details_box row">
+								<% if (score.personalDetails === 25) { %>
+								<div class="col-xl-5 col-md-12 mb-4 detail_box completed">
+									<div class="icon px-2"><i class="bi bi-check-lg"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Basic Profile</p>
+								</div>
+								<% } else { %>
+								<div
+									class="col-xl-5 col-md-12 mb-4 detail_box"
+									onclick="location.href='public-profile/<%= currentUser %>'"
+								>
+									<div class="icon px-2"><i class="bi bi-circle"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Basic Profile</p>
+								</div>
+								<% } %>
+								<div class="col-1"></div>
+								<% if (score.summary === 25) { %>
+								<div class="col-xl-5 col-md-12 mb-4 detail_box completed">
+									<div class="icon px-2"><i class="bi bi-check-lg"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Summary Preferences</p>
+								</div>
+								<% } else { %>
+								<div
+									class="col-xl-5 col-md-12 mb-4 detail_box"
+									onclick="location.href='public-profile/<%= currentUser %>'"
+								>
+									<div class="icon px-2"><i class="bi bi-circle"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Summary Preferences</p>
+								</div>
+								<% } %> <% if (score.skills === 25) { %>
+								<div class="col-xl-5 col-md-12 mb-4 detail_box completed">
+									<div class="icon px-2"><i class="bi bi-check-lg"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Skill sets</p>
+								</div>
+								<% } else { %>
+								<div
+									class="col-xl-5 col-md-12 mb-4 detail_box"
+									onclick="location.href='public-profile/<%= currentUser %>'"
+								>
+									<div class="icon px-2"><i class="bi bi-circle"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Skill sets</p>
+								</div>
+								<% } %>
+								<div class="col-1"></div>
+								<% if (score.projects === 25) { %>
+								<div class="col-xl-5 col-md-12 mb-4 detail_box completed">
+									<div class="icon px-2"><i class="bi bi-check-lg"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Project Works</p>
+								</div>
+								<% } else { %>
+								<div
+									class="col-xl-5 col-md-12 mb-4 detail_box"
+									onclick="location.href='public-profile/<%= currentUser %>'"
+								>
+									<div class="icon px-2"><i class="bi bi-circle"></i></div>
+									&nbsp;&nbsp;
+									<p>Add Project Works</p>
+								</div>
+								<% } %>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-3">
+					<div id="course-status">
+						<h5 style="font-weight: 800">
+							<% if (score.testAttended) { %> You enrolled in some test &nbsp;
+							🙂 <% } else { %> You haven't enrolled in any test &nbsp; 🙂 <% }
+							%>
+						</h5>
+						<div class="form-text mt-2">
+							Start improving your programming skills today. Browse our skill
+							test catelog and enroll in a tests.
+						</div>
+						<br />
+						<button
+							class="btn btn-blue-black"
+							onclick="location.href='/all_skill_test'"
+						>
+							Browse Tests
+						</button>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/profileStrength.js"></script>
+<%- include('./partials/footer.ejs') -%>

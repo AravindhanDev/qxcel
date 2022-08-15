@@ -1,0 +1,248 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/publicprofile.css" />
+<link rel="stylesheet" href="../css/allskilltest.css" />
+<section id="all-skills" class="grid-container">
+	<%- include("./partials/sidebar.ejs") -%> <%-
+	include("./partials/downbar.ejs") -%>
+
+	<div class="grid-item main">
+		<main class="pt-4">
+			<%- include("./partials/navbarskilltest.ejs") -%>
+			<!-- nav end -->
+			<div class="row tabs mt-4">
+				<div class="col-12 d-flex" style="padding: 0">
+					<div class="tab-1">Discover <span>10</span></div>
+					<div class="tab-2">
+						My Skill Tests <span><%= attendedList.length %></span>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-5 skill_test-container">
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/html'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/html.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">HTML 5</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/css'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/css.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">CSS 3</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/java'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/java.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">Java</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/python'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/python.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">Python</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/javascript'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/javascript.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">JavaScript (ES6)</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/bootstrap'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/bootstrap.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">Bootstrap</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/jquery'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/jquery.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">jQuery</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-sm-6">
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/react.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">
+								React.js &nbsp; <span class="pro">Soon</span>
+							</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-sm-6">
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/android.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">
+								Android &nbsp; <span class="pro">Soon</span>
+							</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/php'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/php.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">PHP</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 col-sm-6">
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/sql.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">
+								SQL &nbsp; <span class="pro">Soon</span>
+							</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row mt-5 test_completed-container d-none">
+				<% if (attendedList.length > 0) { %> <% attendedList.forEach((arr) => {
+				%>
+				<div
+					class="col-xl-4 col-sm-6"
+					onclick="location.href='/skill-test/<%= arr %>'"
+				>
+					<div class="all-skill-box">
+						<div class="all-skill-img">
+							<img src="../images/<%= arr %>.png" alt="" />
+						</div>
+						<div class="all-skill-desc">
+							<p class="all-skill-name">
+								<% if (arr === 'html') arr = "HTML 5" %> <% if (arr === 'css')
+								arr = "CSS 3" %> <% if (arr === 'java') arr = "Java" %> <% if
+								(arr === 'python') arr = "Python" %> <% if (arr ===
+								'javascript') arr = "Javascript (ES6)" %> <% if (arr ===
+								'bootstrap') arr = "Bootstrap" %> <% if (arr === 'jquery') arr =
+								"jQuery" %> <% if (arr === 'react') arr = "React.js" %> <% if
+								(arr === 'android') arr = "Android" %> <% if (arr === 'php') arr
+								= "PHP" %> <% if (arr === 'sql') arr = "SQL" %> <%= arr %>
+							</p>
+							<p class="all-skill-icon">
+								<i class="bi bi-clock"></i> &nbsp; 15min &nbsp;&nbsp;
+								<i class="bi bi-question-square"></i> &nbsp; 25 questions
+							</p>
+						</div>
+					</div>
+				</div>
+				<% }) %> <% } else { %>
+				<h5 style="font-weight: bold">Not Attended Yet &nbsp; 💤</h5>
+				<% } %>
+			</div>
+		</main>
+		<br />
+	</div>
+</section>
+<%- include("./partials/save.ejs") -%>
+<script src="../js/allskilltest.js"></script>
+
+<%- include("./partials/footer.ejs") -%>

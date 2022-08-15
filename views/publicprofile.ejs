@@ -1,0 +1,1184 @@
+<%- include("./partials/header.ejs") -%>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/publicprofile.css" />
+<section id="publicprofile" class="grid-container">
+	<%- include("./partials/sidebar.ejs") -%>
+	<!-- sidebar  -->
+	<%- include("./partials/downbar.ejs") -%>
+	<!-- downbar  -->
+	<% if (hasAccess) { %>
+	<%- include("./partials/save.ejs") %>
+	<% } %>	
+	<!-- save modal -->
+	<div class="grid-item public-profile main" style="position: relative">
+		<div class="alert d-none">
+			<p>Your Profile has been updated</p>
+			<p class="close-alert"><i class="bi bi-x-circle"></i></p>
+		</div>
+		<div class="alert-loading d-none">
+			Processing wait... &nbsp;&nbsp;&nbsp;
+			<span class="loader"><i class="bi bi-arrow-clockwise"></i></span>
+		</div>
+		<main class="publicprofile pt-1">
+			<%- include('./partials/navbarprofile.ejs') -%>
+			<!-- header  -->
+			<div class="row mt-4" style="position: relative">
+				<div class="col-xl-9" style="padding-bottom: 5rem">
+					<div class="profile-header" id="profileWindow">
+						<div class="profile-cover" style="background: url('../images/cover<%= Math.round(Math.random() * 4) + 1 %>.png');background-position: center;
+						background-size: cover;"></div>
+						<div class="profile-desc mt-5">
+							<% if (hasAccess) { %>
+								<input type="file" id="profileFile" accept="image/*" hidden />
+							<% } %>
+							<% if (data?.profileImg) { %>
+							<img src="<%= data.profileImg %>" class="profile-img" alt="" />
+							<% } else if (data?.googleImg) { %>
+							<img src="<%= data.googleImg %>" class="profile-img" alt="" />
+							<% } else if (data?.facebookImage) { %>
+							<img src="<%= data.facebookImage %>" class="profile-img" alt="" />	
+							<% } else { %>
+							<img src="../images/man.png" class="profile-img" alt="" />
+							<% } %>
+							<% if (hasAccess) { %>
+								<div class="profileimg-edit1 d-none">
+									<i class="bi bi-camera-fill"></i>
+								</div>
+								<div class="profileimg-edit2">
+									<i class="bi bi-globe2"></i>
+								</div>
+							<% } %>
+							
+							<span class="d-none file-warn" style="margin-top: 2rem"
+								><i class="bi bi-emoji-frown-fill" style="color: #ffc300"></i>
+								Max Upload <span class="bold">300KB</span>
+							</span>	
+
+							<h3 class="profilenamemargin mt-5 b-800">
+								<%= data?.personalDetails[0]?.name ? data.personalDetails[0].name : data?.googleName ? data.googleName : "Not mentioned" %>
+							</h3>
+							<p>
+								<%= data.personalDetails[0]?.role ?
+								data.personalDetails[0].role : "Not mentioned" %> <%=
+								data.personalDetails[0]?.company ? "at "+
+								data.personalDetails[0].company : '' %>
+							</p>
+							<% if (hasAccess) { %>
+								<div class="btns">
+									<button
+										class="mx-2 btn btn-light b-700"
+										data-bs-toggle="modal"
+										data-bs-target="#personalModal"
+									>
+										<i class="bi bi-pencil-fill"></i> &nbsp; Edit profile
+									</button>
+									<button onclick="location.href='/profile-strength'" class="mx-2 btn btn-light b-700">
+										Profile Strength
+									</button>
+								</div>
+							<% } %>
+							
+						</div>
+					</div>
+					<div class="profile-summary profile-template mt-4" id="summaryWindow">
+						<div class="profile-headers">
+							<h4 class="b-800">Summary</h4>
+							<% if (hasAccess) { %>
+								<button
+								class="btn btn-light updateSummary"
+								id="updateSummary"
+								style="border-radius: 50%; width: 40px; height: 40px"
+							>
+								<i class="bi bi-pencil-fill"></i>
+							</button>
+							<% } %>
+							
+							<div class="d-none profile-project_operations">
+								<button
+									class="btn btn-light closeSummary"
+									id="closeSummary"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-x-lg"></i>
+								</button>
+								<button
+									id="doneSummary"
+									class="btn btn-light btn-red-black doneSummary"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-check2"></i>
+								</button>
+							</div>
+						</div>
+						<div class="profile-summary_body mt-4">
+							<div class="profile-summary-desc text-muted">
+								<p>
+									<%= data.summary[0]?.desc ? data.summary[0].desc
+									: "There is no description" %>
+								</p>
+							</div>
+							<div class="mt-4 profile-summary-details row">
+								<div class="col-md-6 col-sm-12">
+									<p>
+										<i class="bi bi-calendar-range"></i> &nbsp; <%=
+										data.summary[0]?.workno %> years of design experience
+									</p>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<p>
+										<i class="bi bi-wifi"></i> &nbsp; <%=
+										data.summary[0]?.remoteno %> years of remote experience
+									</p>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<p>
+										<i class="bi bi-geo-alt"></i> &nbsp; Lives in <%=
+										data.summary[0]?.loc ? data.summary[0].loc : "India"
+										%>
+									</p>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<p>
+										<i class="bi bi-chat-left-text"></i> &nbsp; Speaks <%=
+										data.summary[0]?.lang %>
+									</p>
+								</div>
+							</div>
+							<div class="profile-summary_footer mt-3 d-flex">
+								<% if (data.summary[0]?.linkedin) { %>
+									<a
+									href="<%= data.summary[0]?.linkedin %>"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="btn btn-light b-700 p-2 px-3"
+								>
+									<i class="bi bi-linkedin"></i>
+									<span class="res-text">&nbsp;&nbsp;LinkedIn</span>
+								</a>
+								<% } else { %>
+									<button class="btn btn-light b-700 p-2 px-3" disabled>
+										<i class="bi bi-linkedin"></i>
+									<span class="res-text">&nbsp;&nbsp;LinkedIn</span>
+									</button>
+								<% } %> 
+								&nbsp;&nbsp;
+								<% if (data.summary[0]?.resume) { %>
+									<a
+										href="<%= data.summary[0]?.resume %>"
+										download="yes"
+										class="btn btn-light b-700 mx-3 p-2 px-3" 
+									>
+										<i class="bi bi-journal-text"></i> 
+										<span class="res-text">&nbsp;&nbsp; CV / Resume</span>
+									</a>
+								<% } else { %>
+									<button class="btn btn-light b-700 p-2 px-3" disabled>
+										<i class="bi bi-journal-text"></i> 
+										<span class="res-text">&nbsp;&nbsp; CV / Resume</span>
+									</button>
+								<% } %>
+								
+							</div>
+						</div>
+						<div class="d-none profile-summary_body_update mt-5">
+							<p class="b-700">About You</p>
+							<div class="row">
+								<div class="col-lg-4">
+									<p style="font-size: 0.9rem">
+										Provide a brief description for your profile.
+									</p>
+								</div>
+								<div class="col-lg-1"></div>
+								<div class="col-lg-7">
+									<textarea
+										style="resize: none"
+										id="summary_description"
+										rows="5"
+										class="form-control"
+										placeholder="I'm a developer that loves..."
+									>
+<%= data.summary[0]?.desc %>
+									</textarea
+									>
+								</div>
+							</div>
+							<p class="b-700 mt-4">Experience</p>
+							<div class="row">
+								<div class="col-lg-4" style="font-size: 0.9rem">
+									Specify both your work and your remote experience.
+								</div>
+								<div class="col-lg-1"></div>
+								<div class="col-lg-4">
+									<input
+										value="<%= Number(data.summary[0]?.workno) %>"
+										type="number"
+										class="form-control"
+										id="worknumber"
+									/>
+									<div class="form-text" style="font-size: 0.8rem">
+										Total years of work experience
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<input
+										value="<%= Number(data.summary[0]?.remoteno) %>"
+										type="number"
+										class="form-control"
+										id="remotenumber"
+									/>
+									<div class="form-text" style="font-size: 0.8rem">
+										Years of remote experience
+									</div>
+								</div>
+							</div>
+							<p class="b-700 mt-4">Location</p>
+							<div class="row">
+								<div class="col-lg-4">
+									<p style="font-size: 0.9rem">
+										Where are you currently living?
+									</p>
+								</div>
+								<div class="col-lg-1"></div>
+								<div class="col-lg-7">
+									<input
+										type="text"
+										placeholder="City, State, Country"
+										class="form-control"
+										value="<%= data.summary[0]?.loc %>"
+										id="locality"
+									/>
+								</div>
+							</div>
+							<p class="b-700 mt-4">Languages</p>
+							<div class="row">
+								<div class="col-lg-4">
+									<p style="font-size: 0.9rem">
+										What languages can you speak? Only add languages in which
+										you have a working proficiency.
+									</p>
+								</div>
+								<div class="col-lg-1"></div>
+								<div class="col-lg-7">
+									<input
+										type="text"
+										placeholder="e.g. English"
+										class="form-control"
+										value="<%= data.summary[0]?.lang %>"
+										id="language"
+									/>
+								</div>
+							</div>
+							<p class="b-700 mt-4">Other resources</p>
+							<div class="row">
+								<div class="col-lg-4" style="font-size: 0.9rem">
+									Add any other resources that will help us get to know you
+									better.
+								</div>
+								<div class="col-lg-1"></div>
+								<div class="col-lg-7">
+									<label for="linkedin">LinkedIn</label>
+									<input
+										id="linkedin"
+										type="text"
+										value="<%= data.summary[0]?.linkedin %>"
+										placeholder="https://linkedin.com/in"
+										class="form-control"
+									/>
+									<br />
+									<label>CV/Resume</label>
+									<br />
+									<button class="btn btn-light b-700" id="uploadFile">
+										Upload PDF
+									</button>
+									<span class="fileName"></span>
+									<input
+										type="file"
+										id="resumeFile"
+										accept="application/pdf"
+										hidden
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="d-none text-center">
+							<img src="../images/nodata.png" width="150" height="150" alt="" />
+							<p class="mt-3" style="width: 300px; margin: auto">
+								Add your best projects which will help you stand out and get
+								noticed.
+							</p>
+							<button class="mt-3 btn btn-red-black b-800">Add Summary</button>
+						</div>
+					</div>
+					<div id="projectWindow" class="profile-project profile-template mt-4">
+						<div class="profile-headers">
+							<h4 class="b-800">Top Projects</h4>
+							<% if (hasAccess) { %>
+							<div class="profile-project_operations">
+								<button
+									class="btn btn-light"
+									id="updateProject"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-pencil-fill"></i>
+								</button>
+								<button
+									data-bs-toggle="modal"
+									data-bs-target="#projectModal"
+									class="btn btn-light btn-red-black"
+									id="addProject"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-plus-lg"></i>
+								</button>
+							</div>
+							<% } %>
+							<div class="profile-project_update d-none">
+								<button
+									class="btn btn-light"
+									id="closeProject"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-x-lg"></i>
+								</button>
+								<button
+									class="btn btn-red-black"
+									id="doneProject"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-check2"></i>
+								</button>
+							</div>
+						</div>
+						<% if (data.projects.length != 0) { %>
+						<div class="project-image-container mt-4">
+							<% data.projects.forEach((arr) => { %>
+							<a
+								class="project-image dark-text text-center"
+								href="<%= arr.link %>"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img src="<%= arr.image %>" class="projbox" alt="" />
+								<% if (hasAccess) { %>
+								<div
+									class="edit-projimg"
+									data-bs-toggle="modal"
+									data-bs-target="#projectModal"
+									onclick="event.preventDefault();"
+								>
+									<i class="bi bi-pencil-fill"></i>
+								</div>
+								<% } %>
+								<p
+									class="mt-2 b-600 projboxname dark-text"
+									style="font-size: 0.9rem"
+								>
+									<%= arr.name %>
+								</p>
+							</a>
+							<% }) %>
+						</div>
+						<% } else { %>
+						<div class="no-data mt-5 text-center">
+							<img src="../images/empty.png" width="120" height="120" alt="" />
+							<% if (hasAccess) { %>
+							<p class="mt-4">
+								Add your best projects which will help <br />
+								you stand out and get noticed.
+							</p>
+							<button
+								class="b-800 btn btn-red-black"
+								data-bs-toggle="modal"
+								id="addProjectEmpty"
+								data-bs-target="#projectModal"
+							>
+								Add Project
+							</button>
+							<% } else { %>
+								<p class="mt-4" style="font-size: 1.2rem;">
+									<i class="bi bi-emoji-frown-fill"></i> &nbsp; 
+									<i>No Projects Available</i>
+								</p>
+							<% } %>
+						</div>
+						<% } %>
+						<div class="profile-project_footer mt-5">
+							<p class="b-700">Portfolio Resources</p>
+							<div class="resources" style="display: flex; flex-wrap: wrap">
+								<% if
+									(data.resources[0]?.website) { %>
+									<a
+										class="btn btn-light b-800"
+										href="<%= data.resources[0]?.website %>"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<i class="bi bi-link-45deg"></i>
+										<span class="res-text">&nbsp;&nbsp;Website</span>
+									</a>
+									<% } else { %>
+									<button
+										class="btn btn-light b-800"
+										disabled
+										style="cursor: not-allowed"
+									>
+										<i class="bi bi-link-45deg"></i>
+										<span class="res-text">&nbsp;&nbsp;Website</span>
+									</button>
+									<% } %> &nbsp;&nbsp; <% if (data.resources[0]?.dribble) { %>
+									<a
+										class="btn btn-light b-800"
+										href="<%= data.resources[0].dribble %>"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<i class="bi bi-dribbble"></i>
+										<span class="res-text">&nbsp;&nbsp;Dribble</span>
+									</a>
+									<% } else { %>
+									<button
+										class="btn btn-light b-800"
+										disabled
+										style="cursor: not-allowed"
+									>
+										<i class="bi bi-dribbble"></i>
+										<span class="res-text">&nbsp;&nbsp;Dribble</span>
+									</button>
+									<% } %> &nbsp;&nbsp; <% if (data.resources[0]?.figma) {
+									%>
+									<a
+										class="btn btn-light b-800"
+										href="<%= data.resources[0].figma %>"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<i class="bi bi-behance"></i>
+										<span class="res-text">&nbsp;&nbsp;Figma</span>
+									</a>
+									<% } else { %>
+									<button
+										class="btn btn-light b-800"
+										disabled
+										style="cursor: not-allowed"
+									>
+										<i class="bi bi-behance"></i>
+										<span class="res-text">&nbsp;&nbsp;Figma</span>
+									</button>
+									<% } %> &nbsp;&nbsp; <% if (data.resources[0]?.github) {
+									%>
+									<a
+										class="btn btn-light b-800"
+										href="<%= data.resources[0].github %>"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<i class="bi bi-github"></i>
+										<span class="res-text">&nbsp;&nbsp;Github</span>
+									</a>
+									<% } else { %>
+									<button
+										class="btn btn-light b-800"
+										disabled
+										style="cursor: not-allowed"
+									>
+										<i class="bi bi-github"></i>
+										<span class="res-text">&nbsp;&nbsp;Github</span>
+									</button>
+									<% } %>
+								</p>
+							</div>
+						</div>
+						<div class="profile-project_edit d-none mt-4">
+							<div class="row">
+								<div class="col-lg-6 mt-4">
+									<label for="websiteurl">Website</label>
+									<input
+										type="text"
+										id="websiteurl"
+										placeholder="https://"
+										class="form-control"
+										value="<%= data.resources[0]?.website != undefined ? data.resources[0].website : '' %>"
+									/>
+								</div>
+								<div class="col-lg-6 mt-4">
+									<label for="dribbleurl">Dribble</label>
+									<input
+										type="text"
+										id="dribbleurl"
+										placeholder="https://dribble.com/"
+										class="form-control"
+										value="<%= data.resources[0]?.dribble != undefined ? data.resources[0].dribble : '' %>"
+									/>
+								</div>
+								<div class="col-lg-6 mt-4">
+									<label for="figmaurl">Figma</label>
+									<input
+										type="text"
+										id="figmaurl"
+										placeholder="https://www.figma.com/"
+										class="form-control"
+										value="<%= data.resources[0]?.figma != undefined ? data.resources[0].figma : '' %>"
+									/>
+								</div>
+								<div class="col-lg-6 mt-4">
+									<label for="githuburl">Github</label>
+									<input
+										type="text"
+										id="githuburl"
+										placeholder="https://github.com/"
+										class="form-control"
+										value="<%= data.resources[0]?.github != undefined ? data.resources[0].github : '' %>"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="skillsWindow" class="profile-skills profile-template mt-4">
+						<div class="profile-headers">
+							<h4 class="b-800">Skills</h4>
+							<% if (hasAccess) { %>
+								<button
+								id="updateSkills"
+								class="btn btn-light"
+								style="border-radius: 50%; width: 40px; height: 40px"
+							>
+								<i class="bi bi-pencil-fill"></i>
+							</button>
+							<% } %>
+							
+							<div class="d-none profile-project_operations">
+								<button
+									class="btn btn-light"
+									id="closeSkills"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-x-lg"></i>
+								</button>
+								<button
+									id="doneSkills"
+									class="btn btn-light btn-red-black"
+									style="border-radius: 50%; width: 40px; height: 40px"
+								>
+									<i class="bi bi-check2"></i>
+								</button>
+							</div>
+						</div>
+						<div class="profile-skill-exist mt-4">
+							<% data.skills.forEach(function(arr) { %>
+							<button class="btn border-50 btn-dark"><%= arr %></button>
+							<% }) %>
+							<div
+								class="<%= data.skills.length != 0 ? 'd-none' : '' %> no-data mt-5 text-center"
+							>
+								<img
+									src="../images/emptyskills.png"
+									width="120"
+									height="120"
+									alt=""
+								/>
+								<% if (hasAccess) { %>
+								<p class="mt-4">
+									Add your skills which will help you <br />
+									stand out and get noticed.
+								</p>
+								<button class="b-800 btn btn-red-black" id="addSkills">
+									Add Skills
+								</button>
+								<% } else { %>
+									<p class="mt-4" style="font-size: 1.2rem;">
+										<i class="bi bi-emoji-frown-fill"></i> &nbsp; 
+										<i>No Skills Available</i>
+									</p>
+								<% } %>
+							</div>
+						</div>
+						<div class="d-none profile-skill-box">
+							<p class="mt-4 b-700">Web Development</p>
+							<div class="skillbox web-languages">
+								<% webSkillArr.forEach((arr) => { %> <% if
+								(data.skills.includes(arr)) { %>
+								<button class="btn border-50 skill-btn btn-dark">
+									<%= arr %>
+								</button>
+								<% } else { %>
+								<button class="btn border-50 skill-btn btn-light">
+									<%= arr %>
+								</button>
+								<% } %> <% }) %>
+							</div>
+							<p class="mt-4 b-700">Programming</p>
+							<div class="skillbox programming-languages">
+								<% programmingSkillArr.forEach((arr) => { %> <% if
+								(data.skills.includes(arr)) { %>
+								<button class="btn border-50 skill-btn btn-dark">
+									<%= arr %>
+								</button>
+								<% } else { %>
+								<button class="btn border-50 skill-btn btn-light">
+									<%= arr %>
+								</button>
+								<% } %> <% }) %>
+							</div>
+							<p class="mt-4 b-700">Interaction Design</p>
+							<div class="skillbox design">
+								<% designSkillArr.forEach((arr) => { %> <% if
+								(data.skills.includes(arr)) { %>
+								<button class="btn border-50 skill-btn btn-dark">
+									<%= arr %>
+								</button>
+								<% } else { %>
+								<button class="btn border-50 skill-btn btn-light">
+									<%= arr %>
+								</button>
+								<% } %> <% }) %>
+							</div>
+							<p class="mt-4 b-700">Tools</p>
+							<div class="skillbox tool-design">
+								<% toolSkillArr.forEach((arr) => { %> <% if
+								(data.skills.includes(arr)) { %>
+								<button class="btn border-50 skill-btn btn-dark">
+									<%= arr %>
+								</button>
+								<% } else { %>
+								<button class="btn border-50 skill-btn btn-light">
+									<%= arr %>
+								</button>
+								<% } %> <% }) %>
+							</div>
+						</div>
+					</div>
+					<div
+						id="experienceWindow"
+						class="profile-experience profile-template mt-3"
+					>
+						<div class="profile-headers">
+							<h4 class="b-800">Work Experience</h4>
+							<% if (hasAccess) { %>
+							<button
+								class="btn btn-light btn-red-black"
+								data-bs-toggle="modal"
+								id="addProfile"
+								data-bs-target="#jobModal"
+								style="border-radius: 50%; width: 40px; height: 40px"
+							>
+								<i class="bi bi-plus-lg"></i>
+							</button>
+							<% } %>
+						</div>
+						<% if (data.work.length != 0) { %>
+						<div class="work-data row mt-5">
+							<% data.work.forEach((arr) => { %>
+							<div
+								class="work-experience col-lg-12 mb-4"
+								style="position: relative"
+							>
+								<div class="b-600" style="margin: 0">
+									<span class="workname"
+										><%= arr.name %> at <%= arr.company %></span
+									>
+									<% if (hasAccess) { %>
+									<div
+										class="edit-work"
+										data-bs-toggle="modal"
+										data-bs-target="#jobModal"
+									>
+										<i class="bi bi-pencil-fill"></i>
+									</div>
+									<% } %>
+									<div class="d-none">
+										<span><%= arr.name %></span>
+										<span><%= arr.company %></span>
+										<span><%= arr.loc %></span>
+										<span><%= arr.startmonth %></span>
+										<span><%= arr.startyear %></span>
+										<span><%= arr.endmonth %></span>
+										<span><%= arr.endyear %></span>
+										<span><%= arr.current %></span>
+										<span><%= arr.description %></span>
+									</div>
+								</div>
+								<p class="workdates" style="margin: 0">
+									<span
+										><%= arr.startmonth.slice(0, 3) %> <%= arr.startyear
+										%></span
+									>
+									- <% if (!arr.current) { %>
+									<span
+										><%= arr.endmonth.slice(0, 3) %> <%= arr.endyear %></span
+									>
+									<br />
+									<% } else { %>
+									<span>Present</span><br />
+									<% } %>
+								</p>
+								<p class="workloc"><%= arr.loc %></p>
+								<p class="mt-2 workdesc"><%= arr.description %></p>
+							</div>
+							<% }) %>
+						</div>
+						<% } else { %>
+						<div class="no-data mt-5 text-center">
+							<img
+								src="../images/emptywork.png"
+								width="120"
+								height="120"
+								alt=""
+							/>
+							<% if (hasAccess) { %>
+							<p class="mt-4">
+								Provide any relevant professional work <br />
+								experience you may have.
+							</p>
+							<button
+								data-bs-toggle="modal"
+								data-bs-target="#jobModal"
+								class="b-800 btn btn-red-black"
+								id="addWorkEmpty"
+							>
+								Add Work Experience
+							</button>
+							<% } else { %>
+								<p class="mt-4" style="font-size: 1.2rem;">
+									<i class="bi bi-emoji-frown-fill"></i> &nbsp; 
+									<i>No Experience Available</i>
+								</p>
+							<% } %>
+						</div>
+						<% } %>
+					</div>
+				</div>
+				<div class="col-xl-3 share_profile" style="margin-bottom: 8rem;">
+					<div class="shareProfile">
+						<h5 class="b-700">
+							Want a <span>custom URL</span> for your profile ?
+						</h5>
+						<p class="mt-3">
+							Share a professional design profile by with personalized branding.
+						</p>
+						<button
+							class="mt-3 btn btn-white w-100 b-700"
+							id="btn-shareprofile"
+						>
+							<i class="bi bi-share-fill"></i> &nbsp; Share Profile URL
+						</button>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</section>
+<div class="modals">
+	<!-- projects  -->
+	<div
+		class="modal fade"
+		id="projectModal"
+		tabindex="-1"
+		aria-labelledby="projectModalLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header profile-headers">
+					<h5 class="modal-title b-800" id="projectModalLabel">Add Project</h5>
+
+					<button
+						type="button"
+						class="btn btn-light"
+						style="width: 40px; height: 40px; border-radius: 50%"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-lg"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<label for="projimg">Image</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input
+								type="file"
+								hidden
+								class="form-control"
+								id="projimg"
+								accept="image/png, images/jpg, image/jpeg"
+							/>
+							<br />
+							<button
+								class="btn btn-light b-700"
+								id="uploadProjImg"
+								style="margin: 0.2rem 0; padding: 0.5rem 0.8rem"
+							>
+								Upload Image
+							</button>
+							<img
+								src=""
+								class="d-none"
+								id="projPreview"
+								width="35"
+								height="35"
+							/>
+							<div class="text-muted file-msg" style="font-size: 0.8rem">
+								We support PNG, JPG or JPEG
+							</div>
+						</div>
+						<div class="col-lg-12 mt-4">
+							<label for="projname">Project Name</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input
+								type="text"
+								placeholder="Chuck Norris"
+								class="form-control"
+								id="projname"
+							/>
+						</div>
+						<div class="col-lg-12 mt-4">
+							<label for="projlink">Link to Project</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input
+								type="text"
+								placeholder="https://"
+								class="form-control"
+								id="projlink"
+							/>
+							<div class="form-text" style="font-size: 0.8rem">
+								Users interested in viewing your project will be able to click
+								out to learn more about what you worked on.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="modal-footer"
+					style="display: flex; justify-content: space-between"
+				>
+					<div class="left">
+						<button
+							type="button"
+							class="btn btn-red-light b-700"
+							data-bs-dismiss="modal"
+							id="deleteProject"
+						>
+							<i class="bi bi-trash3"></i> &nbsp; Delete
+						</button>
+					</div>
+					<div class="right">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">
+							Cancel
+						</button>
+						<button
+							id="saveProject"
+							type="button"
+							disabled
+							data-bs-dismiss="modal"
+							class="btn btn-red-black"
+						>
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- work experience  -->
+	<div
+		class="modal fade"
+		id="jobModal"
+		tabindex="-1"
+		aria-labelledby="jobModalLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header profile-headers">
+					<h5 class="modal-title b-800" id="jobModalLabel">
+						Add Work Experience
+					</h5>
+					<button
+						type="button"
+						class="btn btn-light"
+						style="width: 40px; height: 40px; border-radius: 50%"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-lg"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<label for="jobname">Job Title</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input type="text" class="form-control" id="jobname" />
+						</div>
+						<div class="col-lg-12 mt-4">
+							<label for="companyname">Company Name</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input type="text" class="form-control" id="companyname" />
+						</div>
+						<div class="col-lg-12 mt-4">
+							<label for="joblocation">Location</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input
+								type="text"
+								placeholder="Ex. Chennai, Tamil Nadu"
+								class="form-control"
+								id="joblocation"
+							/>
+						</div>
+						<div class="col-6 mt-4">
+							<label for="jobstartmonth">Start Date</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<select id="jobstartmonth" class="form-select">
+								<option value="" selected disabled>Month</option>
+								<option>January</option>
+								<option>February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+						</div>
+						<div class="col-6 mt-4">
+							<label for="jobstartyear"></label>
+							<select id="jobstartyear" class="form-select">
+								<option value="" selected disabled>Year</option>
+								<option>2022</option>
+								<option>2021</option>
+								<option>2020</option>
+								<option>2019</option>
+								<option>2018</option>
+								<option>2017</option>
+								<option>2016</option>
+								<option>2015</option>
+								<option>2014</option>
+								<option>2013</option>
+								<option>2012</option>
+								<option>2011</option>
+								<option>2010</option>
+								<option>2009</option>
+								<option>2008</option>
+								<option>2007</option>
+								<option>2006</option>
+								<option>2005</option>
+								<option>2004</option>
+								<option>2003</option>
+								<option>2002</option>
+								<option>2001</option>
+								<option>2000</option>
+							</select>
+						</div>
+						<div class="col-6 mt-4">
+							<label for="jobendmonth">End Date</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<select id="jobendmonth" class="form-select">
+								<option value="" selected disabled>Month</option>
+								<option>January</option>
+								<option>February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+						</div>
+						<div class="col-6 mt-4">
+							<label for="jobendyear"></label>
+							<select id="jobendyear" class="form-select">
+								<option value="" selected disabled>Year</option>
+								<option>2022</option>
+								<option>2021</option>
+								<option>2020</option>
+								<option>2019</option>
+								<option>2018</option>
+								<option>2017</option>
+								<option>2016</option>
+								<option>2015</option>
+								<option>2014</option>
+								<option>2013</option>
+								<option>2012</option>
+								<option>2011</option>
+								<option>2010</option>
+								<option>2009</option>
+								<option>2008</option>
+								<option>2007</option>
+								<option>2006</option>
+								<option>2005</option>
+								<option>2004</option>
+								<option>2003</option>
+								<option>2002</option>
+								<option>2001</option>
+								<option>2000</option>
+							</select>
+						</div>
+						<div
+							class="col-lg-12 mt-4"
+							style="display: flex; align-items: center"
+						>
+							<input type="checkbox" id="jobcurrent" class="bigcheckbox" />
+							&nbsp;&nbsp;
+							<label for="jobcurrent">I'm currently working here</label>
+						</div>
+						<div class="col-lg-12 mt-4">
+							<label for="jobdescription">Description</label>
+							<textarea
+								style="resize: none"
+								id="jobdescription"
+								rows="5"
+								class="form-control"
+							></textarea>
+						</div>
+					</div>
+				</div>
+				<div
+					class="modal-footer"
+					style="display: flex; justify-content: space-between"
+				>
+					<div class="left">
+						<button
+							type="button"
+							id="deleteJob"
+							class="btn btn-red-light b-700"
+							data-bs-dismiss="modal"
+						>
+							<i class="bi bi-trash3"></i> &nbsp; Delete
+						</button>
+					</div>
+					<div class="right">
+						<button type="button" class="btn btn-light" data-bs-dismiss="modal">
+							Cancel
+						</button>
+						<button
+							type="button"
+							id="saveJob"
+							data-bs-dismiss="modal"
+							disabled
+							class="btn btn-red-black"
+						>
+							Save
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- personal  -->
+	<div
+		class="modal fade"
+		id="personalModal"
+		tabindex="-1"
+		aria-labelledby="personalModalLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header profile-headers">
+					<h5 class="modal-title b-800" id="personalModalLabel">
+						Profile Details
+					</h5>
+					<button
+						type="button"
+						class="btn btn-light"
+						style="width: 40px; height: 40px; border-radius: 50%"
+						data-bs-dismiss="modal"
+						aria-label="Close"
+					>
+						<i class="bi bi-x-lg"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<label for="fullname">Full Name</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input
+								type="text"
+								class="form-control"
+								value="<%= data.personalDetails[0]?.name || data?.googleName %>"
+								id="fullname"
+							/>
+							<div class="form-text" style="font-size: 0.9rem">
+								Be sure to use your correct full name
+							</div>
+						</div>
+						<div class="col-lg-12 mt-4">
+							<label for="role">Role</label>
+							<strong style="color: var(--warning-color);">*</strong>
+							<input
+								type="text"
+								class="form-control"
+								value="<%= data.personalDetails[0]?.role %>"
+								id="role"
+							/>
+							<div class="form-text" style="font-size: 0.9rem">
+								Let the community know what you do.
+							</div>
+						</div>
+						<div class="col-lg-12 mt-4">
+							<label for="company">Company</label>
+							<input
+								type="text"
+								value="<%= data.personalDetails[0]?.company %>"
+								class="form-control"
+								id="company"
+							/>
+							<div class="form-text" style="font-size: 0.9rem">
+								Where are you currently working?
+							</div>
+						</div>
+						<div class="col-lg-12 mt-4" style="position: relative">
+							<label for="country">Country</label>
+							<input
+								type="text"
+								style="padding-left: 2.7rem"
+								class="form-control"
+								id="country"
+								value="<%= data.personalDetails[0]?.country %>"
+							/>
+							<div class="globe">
+								<i class="bi bi-globe"></i>
+							</div>
+							<div class="form-text" style="font-size: 0.9rem">
+								Let us know which country you're from.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-light" data-bs-dismiss="modal">
+						Cancel
+					</button>
+					<button
+						id="savePersonal"
+						data-bs-dismiss="modal"
+						type="button"
+						disabled
+						class="btn btn-red-black"
+					>
+						Save
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="../js/publicprofile.js"></script>
+<script src="../js/personalprofile.js"></script>
+<script src="../js/profileSkills.js"></script>
+<script src="../js/profileProject.js"></script>
+<script src="../js/profileWork.js"></script>
+
+<%- include("./partials/footer.ejs") -%>
